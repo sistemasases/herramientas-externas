@@ -1,0 +1,25 @@
+.footer {
+    background-color: #384a60;
+    color: #fff;
+    padding: 2.65%;
+    text-align: center;
+    width: 100%;
+    font-family: "Poppins";
+
+  }
+  
+  .footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: "Poppins";
+
+  }
+  
+  p {
+    margin: 0; 
+    font-size: 100%; 
+    color: #fff; 
+    font-family: "Poppins";
+
+  }
+  

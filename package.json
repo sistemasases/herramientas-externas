@@ -1,0 +1,49 @@
+{
+  "name": "herramientas-externas",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fontsource/poppins": "^5.0.15",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "concurrently \"npm run start-semaforo\" \"npm run start-rutas\" \"npm run start-caja\"",
+    "start-linux": "concurrently \"npm run start-semaforo-linux\" \"npm run start-rutas-linux\" \"npm run start-caja-linux\"",
+    "start-semaforo": "cd semaforo && npm start",
+    "start-rutas": "cd rutas-atencion && npm start",
+    "start-caja": "cd caja-herramientas && npm start",
+    "start-semaforo-linux": "cd semaforo && npm run start-linux",
+    "start-rutas-linux": "cd rutas-atencion && npm run start-linux",
+    "start-caja-linux": "cd caja-herramientas && npm run start-linux",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
