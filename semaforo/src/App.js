@@ -3,25 +3,24 @@ import Header from "./componentes/Header";
 import Footer from "./componentes/Footer";
 import Titulos from "./componentes/Titulos";
 import Body from "./componentes/Body";
-import "@fontsource/poppins/700.css"; // Specify weight
+import "@fontsource/poppins/700.css";
+import BackgroundBox from "./componentes/Background";
 
 function App() {
   return (
     <div className="app">
-      <div className="app-background">
+
+      <BackgroundBox />
+
         <Header />
         <Titulos />
 
+
         <Body />
 
-
-
-
-    
-
-      </div>
-
       <Footer />
+
+
 
 
 

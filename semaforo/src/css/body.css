@@ -1,3 +1,20 @@
-body {
-  font-family: "Poppins";
+.body {
+  display: grid;
+  grid-template-columns: repeat(3, auto); 
+  gap: 5%; 
+  justify-items: start;
+  padding: 2%;
+}
+
+.body img {
+  width: 150%; 
+  height: auto;
+}
+
+.body div:nth-child(4) {
+  grid-column: 1 / 2;
+}
+
+.body div:nth-child(5) {
+  grid-column: 2 / 3; 
 }

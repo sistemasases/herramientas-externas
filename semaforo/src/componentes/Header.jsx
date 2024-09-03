@@ -1,5 +1,4 @@
 import React from 'react';
-import lines from '../images/lines.png'; 
 import '../css/header.css'; 
 import logoVicerrectoria from '../images/logoVicerrectoria.svg'
 
