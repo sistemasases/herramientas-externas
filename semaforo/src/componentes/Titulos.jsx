@@ -1,7 +1,7 @@
 import React from 'react';
 import '../css/titulos.css'; 
 import dimensiones from '../images/Titúlos dimensiones y semáforo/Dimensiones.svg'
-import semaforo from '../images/Titúlos dimensiones y semáforo/semáforo.svg'
+import semaforo from '../images/Titúlos dimensiones y semáforo/semaforo.svg'
 
 const Titulos = () => {
   return (
