@@ -13,11 +13,15 @@
 #imgDimensiones {
   width: 45%;
   height: auto;
-  margin-right: 25%;
 }
 
 #imgSemaforo {
   width: 45%;
   height: auto;
-  margin-left: 25%;
+}
+
+.column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

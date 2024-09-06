@@ -8,12 +8,23 @@ import vida_universitaria from '../images/Botones dimensiones principales/Vida_u
 
 const Body = () => {
   return (
-    <div className="body">
-      <div><img src={individual} alt="Individual" /></div>
-      <div><img src={familiar} alt="Familiar" /></div>
-      <div><img src={academico} alt="Académico" /></div>
-      <div><img src={economico} alt="Económico" /></div>
-      <div><img src={vida_universitaria} alt="Vida Universitaria" /></div>
+    <div className = "body">
+      <div className="dimensiones">
+        <div className='fila-dimensiones'>
+          <div><img src={individual} alt="Individual" /></div>
+          <div><img src={familiar} alt="Familiar" /></div>
+          <div><img src={academico} alt="Académico" /></div>
+        </div>
+
+        <div className='fila-dimensiones'>
+          <div><img src={economico} alt="Económico" /></div>
+          <div><img src={vida_universitaria} alt="Vida Universitaria" /></div>
+        </div>
+      </div>
+
+      <div className="semaforo">
+        {/*Semaforo*/}
+      </div>
     </div>
   );
 };

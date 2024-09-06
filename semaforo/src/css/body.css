@@ -1,20 +1,40 @@
 .body {
   display: grid;
-  grid-template-columns: repeat(3, auto); 
-  gap: 5%; 
-  justify-items: start;
-  padding: 2%;
+  grid-template-columns: 1fr 1fr;
+  width: 100vw;
+  height: 60.7vh;
+  margin-top: 10vh;
 }
 
-.body img {
-  width: 100%; 
-  height: auto;
+.dimensiones, .semaforo {
+  width: 100%;
 }
 
-.body div:nth-child(4) {
-  grid-column: 1 / 2;
+.dimensiones {
+  display: flex;
+  flex-direction: column;
 }
 
-.body div:nth-child(5) {
-  grid-column: 2 / 3; 
+.fila-dimensiones {
+  display: flex;;
+  height: 40%;
+  align-items: center;
+  justify-content: space-around;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+
+.fila-dimensiones:last-child {
+  justify-content: space-evenly;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.fila-dimensiones img {
+  width: 80%; 
+  height: auto; 
+  object-fit: cover; 
+  max-width: 100%; 
+  box-sizing: border-box;
 }
