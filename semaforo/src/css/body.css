@@ -38,3 +38,39 @@
   max-width: 100%; 
   box-sizing: border-box;
 }
+
+.fila-dimensiones img {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.fila-dimensiones img.subiendo {
+  transform: translateY(-20px); /* Mueve la imagen hacia arriba */
+  opacity: 0; /* Hace que la imagen desaparezca gradualmente */
+}
+
+.fila-dimensiones img.mostrando {
+  opacity: 1; /* Vuelve a mostrar la imagen */
+}
+
+/* Ocultar los divs invisibles */
+.fila-invisible {
+  display: none;
+}
+
+.fila-invisible.visible {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.mensaje-dimension {
+  width: 10%; /* Ocupa todo el ancho debajo de los botones */
+  text-align: center;
+  position: absolute;
+  font-size: 16px;
+  padding: 10px;
+  color: #333;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  top:50%
+}
