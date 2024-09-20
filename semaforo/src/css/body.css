@@ -39,6 +39,7 @@
   box-sizing: border-box;
 }
 
+
 .fila-dimensiones img {
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
@@ -64,7 +65,7 @@
 }
 
 .mensaje-dimension {
-  width: 10%; /* Ocupa todo el ancho debajo de los botones */
+  width: 35vw; /* Ocupa todo el ancho debajo de los botones */
   text-align: center;
   position: absolute;
   font-size: 16px;

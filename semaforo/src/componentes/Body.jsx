@@ -24,30 +24,42 @@ const Body = () => {
   const [mostrarMensaje, setMostrarMensaje] = useState(false); // Controla la visibilidad del mensaje
   const [primeraVez, setPrimeraVez] = useState(true); // Controla la visibilidad del mensaje
 
-  // Función que maneja el movimiento de las imágenes
-  const moverImagenes = (index, fila) => {
+  // Mensajes para cada dimensión
+  const mensajesDimensiones = {
+    'Individual': 'Corresponde a la información que refiere el/la estudiante respecto a los aspectos personales.',
+    'Familiar': 'Corresponde a la descripción de la dinámica familiar y cómo esta dinámica es una barrera o un facilitador en la elección y la permanencia en el programa académico.',
+    'Académico': 'Corresponde a la información que el/la estudiante le manifiesta al monitor en relación a su desempeño académico y el nivel de desarrollo de habilidades que se han identificado en las actividades académicas que desarrolla cada uno de los estudiantes.',
+    'Económico': 'Información relacionada con la situación económica de los estudiantes y el manejo del dinero.',
+    'Vida Universitaria': 'Corresponde a la información que refiere el/la estudiante respecto a la percepción que este tiene de su vida en la Universidad y la ciudad.'
+  };
 
-
-    // Mensaje basado en la imagen que fue presionada
+  // Función que maneja la selección de la dimensión
+  const manejarSeleccionDimension = (index, fila) => {
+    // Nombre de la dimensión seleccionada según la fila
     const nombreDimension = fila === 1 ? imagenesFila1[index].nombre : imagenesFila2[index].nombre;
 
+    // Solo permite animación si no está en proceso y es la primera vez
     if (!animating && primeraVez) {
       setAnimating(true);
       setPrimeraVez(false);
 
-      // Aplica la clase 'subiendo' temporalmente
+      // Simulación de la animación y reorganización de las imágenes
       setTimeout(() => {
-        // Mueve todas las imágenes de la fila 2 a la fila 1
+        // Mover las imágenes de la fila 2 a la fila 1
         const nuevaFila1 = [...imagenesFila1, ...imagenesFila2];
         setImagenesFila1(nuevaFila1);
         setImagenesFila2([]); // Vaciar la fila 2
-        setMensaje(`Has seleccionado la dimensión ${nombreDimension}`); // Actualizar el mensaje
-        setMostrarMensaje(true); // Mostrar el mensaje
+
+        // Actualizar el mensaje y mostrarlo
+        setMensaje(mensajesDimensiones[nombreDimension]); // Asignar el mensaje correspondiente
+        setMostrarMensaje(true);
+
+        // Finaliza la animación
         setAnimating(false);
       }, 500); // Duración de la animación CSS
-    }
-    else {
-      setMensaje(`Has seleccionado la dimensión ${nombreDimension}`); // Actualizar el mensaje
+    } else {
+      // Actualiza el mensaje sin cambiar la animación
+      setMensaje(mensajesDimensiones[nombreDimension]); // Asignar el mensaje correspondiente
     }
   };
 
@@ -57,7 +69,7 @@ const Body = () => {
         {/* Fila 1 */}
         <div className='fila-dimensiones'>
           {imagenesFila1.map((item, index) => (
-            <div key={index} onClick={() => moverImagenes(index, 1)}>
+            <div key={index} onClick={() => manejarSeleccionDimension(index, 1)}>
               <img 
                 src={item.img} 
                 alt={`Imagen ${item.nombre}`} 
@@ -66,18 +78,18 @@ const Body = () => {
             </div>
           ))}
 
-        {/* Div con el mensaje, solo visible después de hacer clic */}
-        {mostrarMensaje && (
-          <div className="mensaje-dimension">
-            {mensaje}
-          </div>
-        )}
+          {/* Div con el mensaje, solo visible después de hacer clic */}
+          {mostrarMensaje && (
+            <div className="mensaje-dimension">
+              {mensaje}
+            </div>
+          )}
         </div>
 
         {/* Fila 2 */}
         <div className='fila-dimensiones'>
           {imagenesFila2.map((item, index) => (
-            <div key={index} onClick={() => moverImagenes(index, 2)}>
+            <div key={index} onClick={() => manejarSeleccionDimension(index, 2)}>
               <img 
                 src={item.img} 
                 alt={`Imagen ${item.nombre}`} 
