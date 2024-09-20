@@ -5,6 +5,11 @@ import economico from '../images/Botones dimensiones principales/Economico.svg';
 import familiar from '../images/Botones dimensiones principales/Familiar.svg';
 import individual from '../images/Botones dimensiones principales/Individual.svg';
 import vida_universitaria from '../images/Botones dimensiones principales/Vida_universitaria.svg';
+import icon_academico from '../images/iconos_dimensiones/icono_academica.svg';
+import icon_economico from '../images/iconos_dimensiones/icono_economico.svg';
+import icon_familiar from '../images/iconos_dimensiones/icono_familiar.svg';
+import icon_individual from '../images/iconos_dimensiones/icono_individual.svg';
+import icon_vida_universitaria from '../images/iconos_dimensiones/icono_vida.svg';
 
 const Body = () => {
   // Estado inicial con las imágenes en su orden correspondiente
@@ -19,10 +24,19 @@ const Body = () => {
     { img: vida_universitaria, nombre: 'Vida Universitaria' }
   ]);
 
+  const iconos = [
+    { img: icon_academico, nombre: 'Académico' }, // Corregido a 'Académico'
+    { img: icon_economico, nombre: 'Económico' }, // Corregido a 'Económico'
+    { img: icon_familiar, nombre: 'Familiar' },
+    { img: icon_individual, nombre: 'Individual' },
+    { img: icon_vida_universitaria, nombre: 'Vida Universitaria' }
+  ];
+
   const [animating, setAnimating] = useState(false);
   const [mensaje, setMensaje] = useState(''); // Mensaje oculto inicialmente
   const [mostrarMensaje, setMostrarMensaje] = useState(false); // Controla la visibilidad del mensaje
   const [primeraVez, setPrimeraVez] = useState(true); // Controla la visibilidad del mensaje
+  const [imagenMensaje, setImagenMensaje] = useState(''); // Imagen que aparece en el mensaje
 
   // Mensajes para cada dimensión
   const mensajesDimensiones = {
@@ -37,6 +51,11 @@ const Body = () => {
   const manejarSeleccionDimension = (index, fila) => {
     // Nombre de la dimensión seleccionada según la fila
     const nombreDimension = fila === 1 ? imagenesFila1[index].nombre : imagenesFila2[index].nombre;
+    const imagenDimension = fila === 1 ? imagenesFila1[index].img : imagenesFila2[index].img;
+
+    // Buscar el icono correspondiente
+    const iconoEncontrado = iconos.find(icono => icono.nombre === nombreDimension);
+    const iconoDimension = iconoEncontrado ? iconoEncontrado.img : null;
 
     // Solo permite animación si no está en proceso y es la primera vez
     if (!animating && primeraVez) {
@@ -50,16 +69,18 @@ const Body = () => {
         setImagenesFila1(nuevaFila1);
         setImagenesFila2([]); // Vaciar la fila 2
 
-        // Actualizar el mensaje y mostrarlo
+        // Actualizar el mensaje, imagen y mostrarlo
         setMensaje(mensajesDimensiones[nombreDimension]); // Asignar el mensaje correspondiente
+        setImagenMensaje(iconoDimension); // Asignar la imagen correspondiente
         setMostrarMensaje(true);
 
         // Finaliza la animación
         setAnimating(false);
       }, 500); // Duración de la animación CSS
     } else {
-      // Actualiza el mensaje sin cambiar la animación
+      // Actualiza el mensaje e imagen sin cambiar la animación
       setMensaje(mensajesDimensiones[nombreDimension]); // Asignar el mensaje correspondiente
+      setImagenMensaje(iconoDimension); // Asignar la imagen correspondiente
     }
   };
 
@@ -81,7 +102,14 @@ const Body = () => {
           {/* Div con el mensaje, solo visible después de hacer clic */}
           {mostrarMensaje && (
             <div className="mensaje-dimension">
-              {mensaje}
+              {imagenMensaje && (
+                <img 
+                  src={imagenMensaje} 
+                  alt="Icono de la dimensión" 
+                  className="imagen-mensaje" // Nueva clase para la imagen dentro del mensaje
+                />
+              )}
+              <p>{mensaje}</p>
             </div>
           )}
         </div>
