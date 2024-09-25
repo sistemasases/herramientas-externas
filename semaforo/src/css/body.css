@@ -17,44 +17,36 @@
 }
 
 .fila-dimensiones {
-  display: flex;;
-  height: 40%;
+  display: flex;
+  height: 30%;
   align-items: center;
   justify-content: space-around;
   padding-left: 10%;
   padding-right: 10%;
 }
 
-
 .fila-dimensiones:last-child {
   justify-content: space-evenly;
-  padding-left: 20%;
-  padding-right: 20%;
 }
 
 .fila-dimensiones img {
-  width: 80%; 
-  height: auto; 
-  object-fit: cover; 
-  max-width: 100%; 
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+  max-width: 100%;
   box-sizing: border-box;
-}
-
-
-.fila-dimensiones img {
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .fila-dimensiones img.subiendo {
-  transform: translateY(-20px); /* Mueve la imagen hacia arriba */
-  opacity: 0; /* Hace que la imagen desaparezca gradualmente */
+  transform: translateY(-20px);
+  opacity: 0;
 }
 
 .fila-dimensiones img.mostrando {
-  opacity: 1; /* Vuelve a mostrar la imagen */
+  opacity: 1;
 }
 
-/* Ocultar los divs invisibles */
 .fila-invisible {
   display: none;
 }
@@ -69,14 +61,16 @@
   width: 35vw;
   position: absolute;
   font-size: 16px;
+  font-weight: regular;
   padding: 10px;
   color: #ffff;
   background-color: #9b7853;
   border-radius: 5px;
-  top: 55%;
-  transform: translateY(-50%); /* Centra verticalmente el mensaje */
+  margin-top: 10px;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
-  align-items: center; /* Centra los elementos verticalmente */
+  align-items: center;
 }
 
 .mensaje-dimension img.imagen-mensaje {
@@ -91,5 +85,23 @@
   font-size: 16px;
   color: #ffff;
   text-align: center;
+
 }
 
+.botones-dimension {
+  display: table;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  height: 30%;
+  padding: 10px;
+  gap: 10px; /* Espacio entre botones */
+}
+
+.boton-dimension {
+  display: table-cell;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto; /* No crecer, no encogerse, tamaño automático */
+  max-height: 80px; /* Ajusta esto según el tamaño deseado */
+}

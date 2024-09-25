@@ -4,6 +4,7 @@ import Footer from "./componentes/Footer";
 import Titulos from "./componentes/Titulos";
 import Body from "./componentes/Body";
 import "@fontsource/poppins/700.css";
+import "@fontsource/poppins/400.css";
 import BackgroundBox from "./componentes/Background";
 
 function App() {

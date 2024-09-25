@@ -153,7 +153,7 @@ function Body() {
   });
 
   const manejarSeleccionDimension = (dimension) => {
-    const { name, icon, message, buttons } = dimension;
+    const { icon, message, buttons } = dimension;
 
     if (!state.animating && state.primeraVez) {
       setState((prev) => ({ ...prev, animating: true, primeraVez: false }));
@@ -200,10 +200,7 @@ function Body() {
             />
           ))}
 
-          {/* Mensaje de dimensión */}
-          {state.mostrarMensaje && (
-            <Message img={state.imagenMensaje} texto={state.mensaje} />
-          )}
+
         </div>
 
         {/* Fila 2 */}
@@ -218,6 +215,10 @@ function Body() {
               animationClass="subiendo" 
             />
           ))}
+          {/* Mensaje de dimensión */}
+          {state.mostrarMensaje && (
+            <Message img={state.imagenMensaje} texto={state.mensaje} />
+          )}
         </div>
 
         {/* Divs invisibles para los botones de cada dimensión */}
