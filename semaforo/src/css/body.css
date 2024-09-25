@@ -66,16 +66,17 @@
 }
 
 .mensaje-dimension {
-  width: 35vw; /* Ocupa todo el ancho debajo de los botones */
-  text-align: center;
+  width: 35vw;
   position: absolute;
   font-size: 16px;
   padding: 10px;
   color: #ffff;
   background-color: #9b7853;
   border-radius: 5px;
-  top:50%;
+  top: 55%;
+  transform: translateY(-50%); /* Centra verticalmente el mensaje */
   display: flex;
+  align-items: center; /* Centra los elementos verticalmente */
 }
 
 .mensaje-dimension img.imagen-mensaje {
@@ -89,4 +90,6 @@
   margin: 0;
   font-size: 16px;
   color: #ffff;
+  text-align: center;
 }
+

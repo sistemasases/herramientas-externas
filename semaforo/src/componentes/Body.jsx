@@ -1,5 +1,9 @@
+// src/components/Body.jsx
+
 import React, { useState } from 'react';
 import '../css/body.css';
+
+// Importaciones de imágenes mantenidas igual
 import academico from '../images/Botones dimensiones principales/Academico.svg';
 import economico from '../images/Botones dimensiones principales/Economico.svg';
 import familiar from '../images/Botones dimensiones principales/Familiar.svg';
@@ -11,76 +15,172 @@ import icon_familiar from '../images/iconos_dimensiones/icono_familiar.svg';
 import icon_individual from '../images/iconos_dimensiones/icono_individual.svg';
 import icon_vida_universitaria from '../images/iconos_dimensiones/icono_vida.svg';
 
-const Body = () => {
-  // Estado inicial con las imágenes en su orden correspondiente
-  const [imagenesFila1, setImagenesFila1] = useState([
-    { img: individual, nombre: 'Individual' },
-    { img: familiar, nombre: 'Familiar' },
-    { img: academico, nombre: 'Académico' }
-  ]);
+// Botones dimensión académica
+import desempeno_academico from '../images/Botones D. Acádemica/desempeno_academico.svg';
+import eleccion_vocaciona from '../images/Botones D. Acádemica/eleccion_vocacional.svg';
+import manejo_tiempo from '../images/Botones D. Acádemica/manejo_tiempo.svg';
 
-  const [imagenesFila2, setImagenesFila2] = useState([
-    { img: economico, nombre: 'Económico' },
-    { img: vida_universitaria, nombre: 'Vida Universitaria' }
-  ]);
+// Botones dimensión económica
+import apoyo_economico_familiar from '../images/Botones D. Económica/apoyo_economico_familiar.svg';
+import apoyo_economico_institucional from '../images/Botones D. Económica/apoyo_economico_institucional.svg';
+import manejo_finanzas from '../images/Botones D. Económica/manejo_finanzas.svg';
+import situacion_laboral from '../images/Botones D. Económica/situacion_laboral.svg';
 
-  const iconos = [
-    { img: icon_academico, nombre: 'Académico' }, // Corregido a 'Académico'
-    { img: icon_economico, nombre: 'Económico' }, // Corregido a 'Económico'
-    { img: icon_familiar, nombre: 'Familiar' },
-    { img: icon_individual, nombre: 'Individual' },
-    { img: icon_vida_universitaria, nombre: 'Vida Universitaria' }
-  ];
+// Botones dimensión familiar
+import dinamica_familiar from '../images/Botones D. Familiar/dinamica_familiar.svg';
 
-  const [animating, setAnimating] = useState(false);
-  const [mensaje, setMensaje] = useState(''); // Mensaje oculto inicialmente
-  const [mostrarMensaje, setMostrarMensaje] = useState(false); // Controla la visibilidad del mensaje
-  const [primeraVez, setPrimeraVez] = useState(true); // Controla la visibilidad del mensaje
-  const [imagenMensaje, setImagenMensaje] = useState(''); // Imagen que aparece en el mensaje
+// Botones dimensión individual
+import aspectos_motivacionales from '../images/Botones D. Individual/aspectos_motivacionales.svg';
+import autoconocimiento from '../images/Botones D. Individual/autoconocimiento1.svg';
+import diversidad_sexual from '../images/Botones D. Individual/diversidad_sexual.svg';
+import historia_vida from '../images/Botones D. Individual/historia_vida.svg';
+import identificacion from '../images/Botones D. Individual/identificacion.svg';
+import proyecto_vida from '../images/Botones D. Individual/proyecto_vida.svg';
+import red_apoyo from '../images/Botones D. Individual/red_apoyo.svg';
+import relacion from '../images/Botones D. Individual/relacion.svg';
+import salud from '../images/Botones D. Individual/salud.svg';
 
-  // Mensajes para cada dimensión
-  const mensajesDimensiones = {
-    'Individual': 'Corresponde a la información que refiere el/la estudiante respecto a los aspectos personales.',
-    'Familiar': 'Corresponde a la descripción de la dinámica familiar y cómo esta dinámica es una barrera o un facilitador en la elección y la permanencia en el programa académico.',
-    'Académico': 'Corresponde a la información que el/la estudiante le manifiesta al monitor en relación a su desempeño académico y el nivel de desarrollo de habilidades que se han identificado en las actividades académicas que desarrolla cada uno de los estudiantes.',
-    'Económico': 'Información relacionada con la situación económica de los estudiantes y el manejo del dinero.',
-    'Vida Universitaria': 'Corresponde a la información que refiere el/la estudiante respecto a la percepción que este tiene de su vida en la Universidad y la ciudad.'
-  };
+// Botones dimensión vida universitaria
+import adaptacion from '../images/Botones D. Vida universitaria/adaptacion.svg';
+import oferta_servicio from '../images/Botones D. Vida universitaria/oferta_servicio.svg';
+import motivaciones from '../images/Botones D. Vida universitaria/motivaciones.svg';
+import referencia from '../images/Botones D. Vida universitaria/referencia.svg';
+import vinculacion from '../images/Botones D. Vida universitaria/vinculacion.svg';
+import vivienda from '../images/Botones D. Vida universitaria/vivienda.svg';
 
-  // Función que maneja la selección de la dimensión
-  const manejarSeleccionDimension = (index, fila) => {
-    // Nombre de la dimensión seleccionada según la fila
-    const nombreDimension = fila === 1 ? imagenesFila1[index].nombre : imagenesFila2[index].nombre;
-    const imagenDimension = fila === 1 ? imagenesFila1[index].img : imagenesFila2[index].img;
+// Componente para los botones de dimensión
+const DimensionButton = ({ img, nombre, onClick, animating, animationClass }) => (
+  <div onClick={onClick}>
+    <img
+      src={img}
+      alt={`Imagen ${nombre}`}
+      className={animating ? animationClass : ''}
+    />
+  </div>
+);
 
-    // Buscar el icono correspondiente
-    const iconoEncontrado = iconos.find(icono => icono.nombre === nombreDimension);
-    const iconoDimension = iconoEncontrado ? iconoEncontrado.img : null;
+// Componente para el mensaje de dimensión
+const Message = ({ img, texto }) => (
+  <div className="mensaje-dimension">
+    {img && <img src={img} alt="Icono de la dimensión" className="imagen-mensaje" />}
+    <p>{texto}</p>
+  </div>
+);
 
-    // Solo permite animación si no está en proceso y es la primera vez
-    if (!animating && primeraVez) {
-      setAnimating(true);
-      setPrimeraVez(false);
+// Definición de las dimensiones y sus propiedades
+const DIMENSIONS = [
+  {
+    name: 'Individual',
+    img: individual,
+    icon: icon_individual,
+    buttons: [
+      aspectos_motivacionales,
+      autoconocimiento,
+      diversidad_sexual,
+      historia_vida,
+      identificacion,
+      proyecto_vida,
+      red_apoyo,
+      relacion,
+      salud,
+    ],
+    message:
+      'Corresponde a la información que refiere el/la estudiante respecto a los aspectos personales.',
+  },
+  {
+    name: 'Familiar',
+    img: familiar,
+    icon: icon_familiar,
+    buttons: [dinamica_familiar],
+    message:
+      'Corresponde a la descripción de la dinámica familiar y cómo esta dinámica es una barrera o un facilitador en la elección y la permanencia en el programa académico.',
+  },
+  {
+    name: 'Académico',
+    img: academico,
+    icon: icon_academico,
+    buttons: [
+      desempeno_academico,
+      eleccion_vocaciona,
+      manejo_tiempo,
+    ],
+    message:
+      'Corresponde a la información que el/la estudiante le manifiesta al monitor en relación a su desempeño académico y el nivel de desarrollo de habilidades que se han identificado en las actividades académicas que desarrolla cada uno de los estudiantes.',
+  },
+  {
+    name: 'Económico',
+    img: economico,
+    icon: icon_economico,
+    buttons: [
+      apoyo_economico_familiar,
+      apoyo_economico_institucional,
+      manejo_finanzas,
+      situacion_laboral,
+    ],
+    message:
+      'Información relacionada con la situación económica de los estudiantes y el manejo del dinero.',
+  },
+  {
+    name: 'Vida Universitaria',
+    img: vida_universitaria,
+    icon: icon_vida_universitaria,
+    buttons: [
+      adaptacion,
+      oferta_servicio,
+      motivaciones,
+      referencia,
+      vinculacion,
+      vivienda,
+    ],
+    message:
+      'Corresponde a la información que refiere el/la estudiante respecto a la percepción que este tiene de su vida en la Universidad y la ciudad.',
+  },
+];
 
-      // Simulación de la animación y reorganización de las imágenes
+function Body() {
+  const [rows, setRows] = useState({
+    fila1: DIMENSIONS.slice(0, 3),
+    fila2: DIMENSIONS.slice(3),
+  });
+
+  const [state, setState] = useState({
+    animating: false,
+    mostrarMensaje: false,
+    primeraVez: true,
+    mensaje: '',
+    imagenMensaje: '',
+    botonesMostrados: [], // Nuevo estado para botones
+  });
+
+  const manejarSeleccionDimension = (dimension) => {
+    const { name, icon, message, buttons } = dimension;
+
+    if (!state.animating && state.primeraVez) {
+      setState((prev) => ({ ...prev, animating: true, primeraVez: false }));
+
       setTimeout(() => {
-        // Mover las imágenes de la fila 2 a la fila 1
-        const nuevaFila1 = [...imagenesFila1, ...imagenesFila2];
-        setImagenesFila1(nuevaFila1);
-        setImagenesFila2([]); // Vaciar la fila 2
+        const nuevaFila1 = [...rows.fila1, ...rows.fila2];
+        setRows({
+          fila1: nuevaFila1,
+          fila2: [],
+        });
 
-        // Actualizar el mensaje, imagen y mostrarlo
-        setMensaje(mensajesDimensiones[nombreDimension]); // Asignar el mensaje correspondiente
-        setImagenMensaje(iconoDimension); // Asignar la imagen correspondiente
-        setMostrarMensaje(true);
-
-        // Finaliza la animación
-        setAnimating(false);
-      }, 500); // Duración de la animación CSS
+        setState((prev) => ({
+          ...prev,
+          mensaje: message,
+          imagenMensaje: icon,
+          mostrarMensaje: true,
+          animating: false,
+          botonesMostrados: buttons, // Actualiza los botones mostrados
+        }));
+      }, 500);
     } else {
-      // Actualiza el mensaje e imagen sin cambiar la animación
-      setMensaje(mensajesDimensiones[nombreDimension]); // Asignar el mensaje correspondiente
-      setImagenMensaje(iconoDimension); // Asignar la imagen correspondiente
+      setState((prev) => ({
+        ...prev,
+        mensaje: message,
+        imagenMensaje: icon,
+        botonesMostrados: buttons, // Actualiza los botones mostrados sin animación
+      }));
     }
   };
 
@@ -88,51 +188,47 @@ const Body = () => {
     <div className="body">
       <div className="dimensiones">
         {/* Fila 1 */}
-        <div className='fila-dimensiones'>
-          {imagenesFila1.map((item, index) => (
-            <div key={index} onClick={() => manejarSeleccionDimension(index, 1)}>
-              <img 
-                src={item.img} 
-                alt={`Imagen ${item.nombre}`} 
-                className={animating ? 'mostrando' : ''} // Añadir clase mostrando al terminar la animación
-              />
-            </div>
+        <div className="fila-dimensiones">
+          {rows.fila1.map((dimension) => (
+            <DimensionButton
+              key={dimension.name}
+              img={dimension.img}
+              nombre={dimension.name}
+              onClick={() => manejarSeleccionDimension(dimension)}
+              animating={state.animating}
+              animationClass="mostrando" 
+            />
           ))}
 
-          {/* Div con el mensaje, solo visible después de hacer clic */}
-          {mostrarMensaje && (
-            <div className="mensaje-dimension">
-              {imagenMensaje && (
-                <img 
-                  src={imagenMensaje} 
-                  alt="Icono de la dimensión" 
-                  className="imagen-mensaje" // Nueva clase para la imagen dentro del mensaje
-                />
-              )}
-              <p>{mensaje}</p>
-            </div>
+          {/* Mensaje de dimensión */}
+          {state.mostrarMensaje && (
+            <Message img={state.imagenMensaje} texto={state.mensaje} />
           )}
         </div>
 
         {/* Fila 2 */}
-        <div className='fila-dimensiones'>
-          {imagenesFila2.map((item, index) => (
-            <div key={index} onClick={() => manejarSeleccionDimension(index, 2)}>
-              <img 
-                src={item.img} 
-                alt={`Imagen ${item.nombre}`} 
-                className={animating ? 'subiendo' : ''} // Añadir clase subiendo durante la animación
-              />
-            </div>
+        <div className="fila-dimensiones">
+          {rows.fila2.map((dimension) => (
+            <DimensionButton
+              key={dimension.name}
+              img={dimension.img}
+              nombre={dimension.name}
+              onClick={() => manejarSeleccionDimension(dimension)}
+              animating={state.animating}
+              animationClass="subiendo" 
+            />
+          ))}
+        </div>
+
+        {/* Divs invisibles para los botones de cada dimensión */}
+        <div className="botones-dimension" style={{ display: state.botonesMostrados.length ? 'block' : 'none' }}>
+          {state.botonesMostrados.map((buttonImg, index) => (
+            <img key={index} src={buttonImg} alt={`Botón ${index}`} className="boton-dimension" />
           ))}
         </div>
       </div>
-
-      <div className="semaforo">
-        {/* Semaforo */}
-      </div>
     </div>
   );
-};
+}
 
 export default Body;
