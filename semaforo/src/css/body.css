@@ -1,10 +1,10 @@
 .body {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 100vw;
-  height: 60.7vh;
-  margin-top: 10vh;
-  font-family: 'Poppins';
+  grid-template-columns: 1fr;
+  width: 100%;
+  height: auto;
+  margin-top: 5vh;
+  font-family: 'Poppins', sans-serif;
 }
 
 .dimensiones, .semaforo {
@@ -18,90 +18,119 @@
 
 .fila-dimensiones {
   display: flex;
-  height: 30%;
+  height: 20vh;
   align-items: center;
   justify-content: space-around;
   padding-left: 10%;
   padding-right: 10%;
-}
-
-.fila-dimensiones:last-child {
+  }
+  .fila-dimensiones:first-child {
+    margin-top: 20px;
+  }
+  .fila-dimensiones:last-child {
   justify-content: space-evenly;
-}
-
-.fila-dimensiones img {
+  }
+  .fila-dimensiones img {
   width: 80%;
   height: auto;
   object-fit: cover;
   max-width: 100%;
   box-sizing: border-box;
   transition: transform 0.5s ease, opacity 0.5s ease;
-}
-
-.fila-dimensiones img.subiendo {
+  }
+  .fila-dimensiones img.subiendo {
   transform: translateY(-20px);
   opacity: 0;
-}
-
-.fila-dimensiones img.mostrando {
+  }
+  .fila-dimensiones img.mostrando {
   opacity: 1;
-}
-
-.fila-invisible {
-  display: none;
-}
-
-.fila-invisible.visible {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
+  }
 
 .mensaje-dimension {
-  width: 35vw;
-  position: absolute;
-  font-size: 16px;
-  font-weight: regular;
-  padding: 10px;
-  color: #ffff;
+  width: 95%;
+  position: relative;
+  font-size: 14px;
+  padding: 15px;
+  color: #fff;
   background-color: #9b7853;
   border-radius: 5px;
-  margin-top: 10px;
-  top: 50%;
-  transform: translateY(-50%);
+  margin: 20px auto;
   display: flex;
   align-items: center;
 }
 
-.mensaje-dimension img.imagen-mensaje {
-  font-family: 'Poppins';
-  height: fit-content;
-  width: auto;
+.mensaje-dimension img {
+  width: 150px;
   margin-right: 10px;
 }
 
 .mensaje-dimension p {
   margin: 0;
-  font-size: 16px;
-  color: #ffff;
-  text-align: center;
-
+  font-size: 14px;
+  color: #fff;
+  text-align: left;
 }
 
 .botones-dimension {
   display: table;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
-  height: 30%;
-  padding: 10px;
-  gap: 10px; /* Espacio entre botones */
+  border-collapse: separate;
+  border-spacing: 10px;
+  margin: 0 auto;
+  min-height: 30vh;
+  padding: 15px;
+}
+
+.botones-dimension-row {
+  display: table-row;
 }
 
 .boton-dimension {
   display: table-cell;
-  align-items: center;
-  justify-content: center;
-  flex: 0 0 auto; /* No crecer, no encogerse, tamaño automático */
-  max-height: 80px; /* Ajusta esto según el tamaño deseado */
+  vertical-align: middle;
+  text-align: center;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.boton-dimension img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+
+@media (min-width: 768px) {
+  .body {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .fila-dimensiones img {
+    max-width: 200px;
+  }
+
+  .mensaje-dimension {
+    font-size: 16px;
+  }
+
+  .mensaje-dimension p {
+    font-size: 16px;
+  }
+
+  .boton-dimension {
+    max-width: 120px;
+    max-height: 120px;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .fila-dimensiones img {
+    max-width: 250px;
+  }
+
+  .boton-dimension {
+    max-width: 150px;
+    max-height: 150px;
+  }
+
 }
