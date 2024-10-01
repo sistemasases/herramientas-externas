@@ -1,19 +1,24 @@
 .body {
   display: grid;
   grid-template-columns: 1fr;
+  gap: 0.3%;
   width: 100%;
   height: auto;
   margin-top: 5vh;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  font-size: 18px;
 }
 
-.dimensiones, .semaforo {
-  width: 100%;
+.dimensiones,
+.semaforo {
+  margin-top: 1vh;
 }
 
 .dimensiones {
   display: flex;
   flex-direction: column;
+  border-right: 2px solid #cc9c69;
 }
 
 .fila-dimensiones {
@@ -23,28 +28,28 @@
   justify-content: space-around;
   padding-left: 10%;
   padding-right: 10%;
-  }
-  .fila-dimensiones:first-child {
-    margin-top: 20px;
-  }
-  .fila-dimensiones:last-child {
+}
+.fila-dimensiones:first-child {
+  margin-top: 20px;
+}
+.fila-dimensiones:last-child {
   justify-content: space-evenly;
-  }
-  .fila-dimensiones img {
+}
+.fila-dimensiones img {
   width: 80%;
   height: auto;
   object-fit: cover;
   max-width: 100%;
   box-sizing: border-box;
   transition: transform 0.5s ease, opacity 0.5s ease;
-  }
-  .fila-dimensiones img.subiendo {
+}
+.fila-dimensiones img.subiendo {
   transform: translateY(-20px);
   opacity: 0;
-  }
-  .fila-dimensiones img.mostrando {
+}
+.fila-dimensiones img.mostrando {
   opacity: 1;
-  }
+}
 
 .mensaje-dimension {
   width: 95%;
@@ -66,18 +71,18 @@
 
 .mensaje-dimension p {
   margin: 0;
-  font-size: 14px;
+  font-size: 18px;
   color: #fff;
   text-align: left;
 }
 
 .botones-dimension {
   display: table;
-  border-collapse: separate;
-  border-spacing: 10px;
-  margin: 0 auto;
-  min-height: 30vh;
-  padding: 15px;
+  width: 100%;
+  height: 35vh;
+  max-height: 35vh;
+  box-sizing: border-box;
+  table-layout: fixed;
 }
 
 .botones-dimension-row {
@@ -88,8 +93,6 @@
   display: table-cell;
   vertical-align: middle;
   text-align: center;
-  max-width: 100px;
-  max-height: 100px;
 }
 
 .boton-dimension img {
@@ -98,39 +101,143 @@
   object-fit: contain;
 }
 
+/* Ajustes para diferentes cantidades de botones */
+.botones-dimension[data-button-count="1"] .boton-dimension {
+  width: 100%;
+}
+.botones-dimension[data-button-count="2"] .boton-dimension {
+  width: 50%;
+}
+.botones-dimension[data-button-count="3"] .boton-dimension {
+  width: 33.333%;
+}
+.botones-dimension[data-button-count="4"] .boton-dimension {
+  width: 25%;
+}
+.botones-dimension[data-button-count="5"] .boton-dimension,
+.botones-dimension[data-button-count="6"] .boton-dimension,
+.botones-dimension[data-button-count="7"] .boton-dimension,
+.botones-dimension[data-button-count="8"] .boton-dimension,
+.botones-dimension[data-button-count="9"] .boton-dimension,
+.botones-dimension[data-button-count="10"] .boton-dimension {
+  width: 50%;
+}
+
+/* Ajustes para la altura de las filas */
+.botones-dimension[data-button-count="1"] .botones-dimension-row,
+.botones-dimension[data-button-count="2"] .botones-dimension-row,
+.botones-dimension[data-button-count="3"] .botones-dimension-row,
+.botones-dimension[data-button-count="4"] .botones-dimension-row,
+.botones-dimension[data-button-count="5"] .botones-dimension-row {
+  height: 100%;
+}
 
 @media (min-width: 768px) {
   .body {
     grid-template-columns: 1fr 1fr;
   }
-
-  .fila-dimensiones img {
-    max-width: 200px;
-  }
-
-  .mensaje-dimension {
-    font-size: 16px;
-  }
-
-  .mensaje-dimension p {
-    font-size: 16px;
-  }
-
-  .boton-dimension {
-    max-width: 120px;
-    max-height: 120px;
-  }
-
 }
 
-@media (min-width: 1024px) {
-  .fila-dimensiones img {
-    max-width: 250px;
+.semaforo {
+  position: relative;
+  width: 100%;
+  border-left: 2px solid #cc9c69;
+}
+
+.contenedor-semaforo {
+  position: absolute;
+  height: 70%;
+  aspect-ratio: 1/2.4;
+  bottom: 0;
+  margin-left: 5%;
+  align-items: center;
+  overflow: auto;
+}
+
+.imagen-semaforo {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  object-fit: contain;
+}
+
+.semaforo-rojo {
+  position: relative;
+  height: 25%;
+  width: 58%;
+  margin: auto;
+  background: transparent;
+  cursor: pointer;
+}
+
+.semaforo-amarillo {
+  position: relative;
+  height: 25%;
+  width: 58%;
+  margin: auto;
+  background: transparent;
+  cursor: pointer;
+}
+
+.semaforo-verde {
+  position: relative;
+  height: 25%;
+  width: 58%;
+  margin: auto;
+  background: transparent;
+  cursor: pointer;
+}
+
+.mensaje-subdimension {
+  position: relative;
+  left: 5%;
+  top: 0;
+  margin-top: 5%;
+  width: 80%;
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 20%;
+  font-size: 18px;
+  color: #fff;
+  border-radius: 5px;
+  background-color: #384a60;
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  outline: 2px solid #cc9c69;
+}
+
+@media (max-height: 800px) {
+  .body p {
+    font-size: 12px;
   }
 
-  .boton-dimension {
-    max-width: 150px;
-    max-height: 150px;
+  .mensaje-subdimension {
+    font-size: 12px;
   }
+}
 
+/* Puntos superiores */
+.mensaje-subdimension::before,
+.mensaje-subdimension::after {
+  content: "";
+  position: absolute;
+  width: 10px; /* Tamaño del punto */
+  height: 10px;
+  background-color: #fff; /* Color del punto */
+  border-radius: 50%; /* Hacer los puntos circulares */
+  top: 8px; /* Colocarlo ligeramente fuera del contenedor */
+}
+
+/* Punto superior izquierdo */
+.mensaje-subdimension::before {
+  left: 8px;
+}
+
+/* Punto superior derecho */
+.mensaje-subdimension::after {
+  right: 8px;
 }

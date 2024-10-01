@@ -48,6 +48,9 @@ import referencia from "../images/Botones D. Vida universitaria/referencia.svg";
 import vinculacion from "../images/Botones D. Vida universitaria/vinculacion.svg";
 import vivienda from "../images/Botones D. Vida universitaria/vivienda.svg";
 
+// Semáforo
+import semaforo from "../images/semaforo.svg";
+
 // Componente para los botones de dimensión
 const DimensionButton = ({
   img,
@@ -64,6 +67,7 @@ const DimensionButton = ({
     />
   </div>
 );
+
 
 // Componente para el mensaje de dimensión
 const Message = ({ img, texto }) => (
@@ -94,6 +98,7 @@ const DIMENSIONS = [
     ],
     message:
       "Corresponde a la información que refiere el/la estudiante respecto a los aspectos personales.",
+    textosVerde: [],
   },
   {
     name: "Familiar",
@@ -141,6 +146,7 @@ const DIMENSIONS = [
   },
 ];
 
+
 function Body() {
   const [rows, setRows] = useState({
     fila1: DIMENSIONS.slice(0, 3),
@@ -157,7 +163,10 @@ function Body() {
     botonesMostrados: [], // Nuevo estado para botones
   });
 
+
+
   const manejarSeleccionDimension = (dimension) => {
+
     const { icon, message, buttons } = dimension;
 
     const isIndividual = dimension.name === "Individual"; // Verificar si es la dimensión "Individual"
@@ -193,55 +202,89 @@ function Body() {
     }
   };
 
+  const manejarSubDimension = (index) => {
+
+  }
+
   return (
-    <div className="body">
-      <div className="dimensiones">
-        <div className="fila-dimensiones">
-          {rows.fila1.map((dimension) => (
-            <DimensionButton
-              key={dimension.name}
-              img={dimension.img}
-              nombre={dimension.name}
-              onClick={() => manejarSeleccionDimension(dimension)}
-              animating={state.animating}
-              animationClass="mostrando"
-            />
-          ))}
-        </div>
+    <>
+      <div className="body">
+        <div className="dimensiones">
+          <div className="fila-dimensiones">
+            {rows.fila1.map((dimension) => (
+              <DimensionButton
+                key={dimension.name}
+                img={dimension.img}
+                nombre={dimension.name}
+                onClick={() => manejarSeleccionDimension(dimension)}
+                animating={state.animating}
+                animationClass="mostrando"
+              />
+            ))}
+          </div>
 
-        <div className="fila-dimensiones">
-          {rows.fila2.map((dimension) => (
-            <DimensionButton
-              key={dimension.name}
-              img={dimension.img}
-              nombre={dimension.name}
-              onClick={() => manejarSeleccionDimension(dimension)}
-              animating={state.animating}
-              animationClass="subiendo"
-            />
-          ))}
-          {state.mostrarMensaje && (
-            <Message img={state.imagenMensaje} texto={state.mensaje} />
-          )}
-        </div>
+          <div className="fila-dimensiones">
+            {rows.fila2.map((dimension) => (
+              <DimensionButton
+                key={dimension.name}
+                img={dimension.img}
+                nombre={dimension.name}
+                onClick={() => manejarSeleccionDimension(dimension)}
+                animating={state.animating}
+                animationClass="subiendo"
+              />
+            ))}
+            {state.mostrarMensaje && (
+              <Message img={state.imagenMensaje} texto={state.mensaje} />
+            )}
+          </div>
 
-        <div
-          className="botones-dimension"
-          style={{ display: state.botonesMostrados.length ? "block" : "none" }}
-        >
-          {state.botonesMostrados.map((buttonImg, index) => (
-            <img
-              key={index}
-              src={buttonImg}
-              alt={`Botón ${index}`}
-              className={`boton-dimension ${
-                state.individualSeleccionado ? "individual-seleccionado" : ""
-              }`}
-            />
-          ))}
+          <div
+            className="botones-dimension"
+            data-button-count={state.botonesMostrados.length}
+            style={{
+              display: state.botonesMostrados.length ? "table" : "table",
+            }}
+          >
+            {[...Array(Math.ceil(state.botonesMostrados.length / 5))].map(
+              (_, rowIndex) => (
+                <div key={rowIndex} className="botones-dimension-row">
+                  {state.botonesMostrados
+                    .slice(rowIndex * 5, (rowIndex + 1) * 5)
+                    .map((buttonImg, index) => (
+                      <div
+                        key={index}
+                        className="boton-dimension"
+                        onClick={manejarSubDimension(index)}
+                      >
+                        <img
+                          src={buttonImg}
+                          alt={`Botón ${rowIndex * 5 + index + 1}`}
+                        />
+                      </div>
+                    ))}
+                </div>
+              )
+            )}
+          </div>
+        </div>
+        <div className="semaforo">
+          <div className="contenedor-semaforo">
+            <img src={semaforo} alt="Semaforo" className="imagen-semaforo" />
+            <div className="semaforo-rojo" onClick={() => null}></div>
+            <div className="semaforo-amarillo"></div>
+            <div className="semaforo-verde"></div>
+          </div>
+         
+          <div
+            className="mensaje-subdimension"
+          >
+            {state.mensaje}
+          </div>
+         
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

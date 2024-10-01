@@ -1,7 +1,7 @@
 .titulo {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1%;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.3%;
   background-color: #cc9c69;
   color: #fff;
   padding: 1%;
@@ -20,8 +20,16 @@
   height: auto;
 }
 
-.column {
+.column1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-right: 2px solid #cc9c69;
+}
+
+.column2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 2px solid #cc9c69;
 }

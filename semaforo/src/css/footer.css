@@ -1,23 +1,22 @@
 .footer {
-    background-color: #384a60;
-    bottom: 0;
-    color: #fff;
-    padding: 2.65%;
-    text-align: center;
-    font-family: "Poppins";
-    margin-top: auto;   
+  background-color: #384a60;
+  bottom: 0;
+  color: #fff;
+  padding: 2.65%;
+  text-align: center;
+  font-family: "Poppins";
+  margin-top: auto;
+  position: relative;
+  
+}
 
-  }
-  
-  .footer .container {
-    font-family: "Poppins";
+.footer .container {
+  font-family: "Poppins";
+}
 
-  }
-  
-  p {
-    margin: 0; 
-    font-size: 100%; 
-    color: #fff; 
-    font-family: "Poppins";
-  }
-  
+p {
+  margin: 0;
+  font-size: 100%;
+  color: #fff;
+  font-family: "Poppins";
+}

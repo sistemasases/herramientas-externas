@@ -6,11 +6,11 @@ import semaforo from '../images/Titúlos dimensiones y semáforo/semaforo.svg'
 const Titulos = () => {
   return (
       <div className="titulo">
-        <div className='column'>
+        <div className='column1'>
           <img id='imgDimensiones' src={dimensiones} alt="Logo" />
         </div>
          
-         <div className='column'>
+         <div className='column2'>
           <img id='imgSemaforo' src={semaforo} alt="Logo" /> 
          </div>
 
