@@ -42,6 +42,7 @@
   max-width: 100%;
   box-sizing: border-box;
   transition: transform 0.5s ease, opacity 0.5s ease;
+  cursor: pointer;
 }
 .fila-dimensiones img.subiendo {
   transform: translateY(-20px);
@@ -99,6 +100,7 @@
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+  cursor: pointer;
 }
 
 /* Ajustes para diferentes cantidades de botones */
@@ -220,16 +222,26 @@
   }
 }
 
+@media (max-width: 1200px) {
+  .body p {
+    font-size: 12px;
+  }
+
+  .mensaje-subdimension {
+    font-size: 12px;
+  }
+}
+
 /* Puntos superiores */
 .mensaje-subdimension::before,
 .mensaje-subdimension::after {
   content: "";
   position: absolute;
-  width: 10px; /* Tamaño del punto */
+  width: 10px; 
   height: 10px;
-  background-color: #fff; /* Color del punto */
-  border-radius: 50%; /* Hacer los puntos circulares */
-  top: 8px; /* Colocarlo ligeramente fuera del contenedor */
+  background-color: #fff; 
+  border-radius: 50%; 
+  top: 8px; 
 }
 
 /* Punto superior izquierdo */
@@ -240,4 +252,27 @@
 /* Punto superior derecho */
 .mensaje-subdimension::after {
   right: 8px;
+}
+
+.mensaje-semaforo {
+  position: absolute;
+  margin-right: 20%;
+  margin-top: 10%;
+  width: 50%;
+  margin-left: 35%;
+  padding-left: 5%;
+  padding-right: 5%;
+  height: auto;
+  min-height: 25%;
+  font-size: 18px;
+  color: #fff;
+  border-radius: 5px;
+  background-color: #384a60;
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  outline: 2px solid #cc9c69;
 }

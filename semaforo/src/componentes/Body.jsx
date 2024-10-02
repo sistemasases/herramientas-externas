@@ -68,7 +68,6 @@ const DimensionButton = ({
   </div>
 );
 
-
 // Componente para el mensaje de dimensión
 const Message = ({ img, texto }) => (
   <div className="mensaje-dimension">
@@ -146,7 +145,6 @@ const DIMENSIONS = [
   },
 ];
 
-
 function Body() {
   const [rows, setRows] = useState({
     fila1: DIMENSIONS.slice(0, 3),
@@ -163,10 +161,7 @@ function Body() {
     botonesMostrados: [], // Nuevo estado para botones
   });
 
-
-
   const manejarSeleccionDimension = (dimension) => {
-
     const { icon, message, buttons } = dimension;
 
     const isIndividual = dimension.name === "Individual"; // Verificar si es la dimensión "Individual"
@@ -202,9 +197,7 @@ function Body() {
     }
   };
 
-  const manejarSubDimension = (index) => {
-
-  }
+  const manejarSubDimension = (index) => {};
 
   return (
     <>
@@ -275,13 +268,12 @@ function Body() {
             <div className="semaforo-amarillo"></div>
             <div className="semaforo-verde"></div>
           </div>
-         
-          <div
-            className="mensaje-subdimension"
-          >
-            {state.mensaje}
+
+          <div className="mensaje-subdimension">{state.mensaje}</div>
+
+          <div className="mensaje-semaforo">
+            <p>Lorem Ipsum</p>
           </div>
-         
         </div>
       </div>
     </>
