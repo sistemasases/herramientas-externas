@@ -97,7 +97,17 @@ const DIMENSIONS = [
     ],
     message:
       "Corresponde a la información que refiere el/la estudiante respecto a los aspectos personales.",
-    textosVerde: [],
+    titulosSubdimensiones: [
+      "Aspectos Motivacionales",
+      "Autoconocimiento",
+      "Diversidad Sexual",
+      "Historia de Vida",
+      "Identificación",
+      "Proyecto de Vida",
+      "Red de Apoyo",
+      "Relación Erótico-Afectivo",
+      "Salud",
+    ],
   },
   {
     name: "Familiar",
@@ -106,6 +116,7 @@ const DIMENSIONS = [
     buttons: [dinamica_familiar],
     message:
       "Corresponde a la descripción de la dinámica familiar y cómo esta dinámica es una barrera o un facilitador en la elección y la permanencia en el programa académico.",
+    titulosSubdimensiones: ["Dinámica Familiar"],
   },
   {
     name: "Académico",
@@ -114,6 +125,11 @@ const DIMENSIONS = [
     buttons: [desempeno_academico, eleccion_vocaciona, manejo_tiempo],
     message:
       "Corresponde a la información que el/la estudiante le manifiesta al monitor en relación a su desempeño académico y el nivel de desarrollo de habilidades que se han identificado en las actividades académicas que desarrolla cada uno de los estudiantes.",
+    titulosSubdimensiones: [
+      "Desempeño Académico",
+      "Elección Vocacional",
+      "Manejo del Tiempo",
+    ],
   },
   {
     name: "Económico",
@@ -127,6 +143,12 @@ const DIMENSIONS = [
     ],
     message:
       "Información relacionada con la situación económica de los estudiantes y el manejo del dinero.",
+    titulosSubdimensiones: [
+      "Apoyo Económico Familiar",
+      "Apoyo Económico Institucional",
+      "Manejo de Finanzas",
+      "Situación Laboral",
+    ],
   },
   {
     name: "Vida Universitaria",
@@ -142,6 +164,14 @@ const DIMENSIONS = [
     ],
     message:
       "Corresponde a la información que refiere el/la estudiante respecto a la percepción que este tiene de su vida en la Universidad y la ciudad.",
+    titulosSubdimensiones: [
+      "Adaptación a la Ciudad y la Universidad",
+      "Oferta de Servicios",
+      "Motivaciones Para el Acompañamiento",
+      "Referenciación Geográfica",
+      "Vinculación a Grupos y Extracurriculares",
+      "Vivienda",
+    ],
   },
 ];
 
