@@ -1,6 +1,6 @@
 // src/components/Body.jsx
 
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import "../css/body.css";
 
 // Importaciones de imágenes mantenidas igual
@@ -108,7 +108,19 @@ const DIMENSIONS = [
       "Relación Erótico-Afectivo",
       "Salud",
     ],
+    textosSubdimensiones: [
+      "El proceso psicológico básico de la motivación contiene dos componentes principales: los direccionales (que dan cuenta de la elección) y los energizadores (que dan cuenta de la iniciación, la persistencia y el vigor) de la conducta dirigida a meta.",
+      "Tipo de saber que tiene cada sujeto de sí mismo, ya sea de sus representaciones, estados mentales, percepciones, acciones, de su cuerpo, entre otros. En esta temática se incluyen todos los aspectos de conocimiento de sí mismos que los estudiantes expresan sobre cómo se sienten, lo que desean, lo que piensan, lo que los impulsa a actuar, sus valores, todo aquello que constituye su ser desde tres pilares: identidad, autoestima y autoconstrucción.",
+      "Todos aquellos reconocimientos, prácticas y relaciones establecidas por el estudiante; frente a su género, identidad sexual, preferencia sexual y, ante la diversidad sexual de las personas en su contexto cotidiano.",
+      "Esta temática hace referencia a todas las narraciones de vida en tiempo pasado que realizan los estudiantes desde los diferentes contextos socioculturales que vivieron; da cuenta de las prácticas, creencias y valores familiares y culturales que influyen en sus decisiones y en sus formas de ver el mundo.",
+      "Esta temática comprende todo lo referente a la obtención, cambio o pérdida de documentos esenciales que se encuentran inscritos en registros oficiales y que le permiten al estudiante el acceso a los servicios sociales del Estado.",
+      "Esta temática engloba todos los proyectos y metas a mediano y largo plazo que los estudiantes manifestan en los acompañamientos entre pares. El proyecto de vida articula la identidad personal-social en las perspectivas de su dinámica temporal y posibilidades de desarrollo futuro",
+      "Todos aquellos vínculos que tiene el estudiante con otros individuos y/o grupos que sirven para mejorar la adaptación cuando este se enfrenta a situaciones de estrés, reto o privación y que sirven como instancia mediadora en la que se brinda apoyo social de tipo emocional, afectivo e informacional",
+      "Esta temática contiene todo lo referido por los estudiantes narrativamente en relación con sus parejas afectivas y sentimentales.",
+      "Esta temática hace referencia aquellas acciones que permitan identificar y conocer el estado de salud del estudiante, así como su evolución en caso de enfermar o sufrir algún accidente. También se refiere a los reportes que se tengan acerca de la salud mental del estudiante. \n- Informe de cómo se encuentra el estudiante de salud.\n- Informe sobre el seguimiento a sus citas médicas y psicológicas.\n- Informe sobre trámites de la EPS, del Servicio médico y psicológico.",
+    ],
   },
+
   {
     name: "Familiar",
     img: familiar,
@@ -189,6 +201,8 @@ function Body() {
     mensaje: "",
     imagenMensaje: "",
     botonesMostrados: [], // Nuevo estado para botones
+    nombreDimensionActual: "",
+    indiceSubDimensionActual: -1,
   });
 
   const manejarSeleccionDimension = (dimension) => {
@@ -214,6 +228,7 @@ function Body() {
           animating: false,
           botonesMostrados: buttons,
           individualSeleccionado: isIndividual, // Actualiza si es "Individual"
+          dimensionActual: dimension,
         }));
       }, 500);
     } else {
@@ -223,11 +238,20 @@ function Body() {
         imagenMensaje: icon,
         botonesMostrados: buttons,
         individualSeleccionado: isIndividual, // Actualiza si es "Individual"
+        dimensionActual: dimension,
       }));
     }
   };
 
-  const manejarSubDimension = (index) => {};
+  const [tituloSubDimension, setTituloSubDimension] = useState("");
+  const [textoSubDimension, setTextoSubDimension] = useState("");
+  const [mensajeSubDimension, setMensajeSubDimension] = useState("");
+
+  const manejarSubDimension = useCallback((index, state) => {
+    setTituloSubDimension(state.dimensionActual.titulosSubdimensiones[index]);
+    setTextoSubDimension(state.dimensionActual.textosSubdimensiones[index]);
+    setMensajeSubDimension(state.dimensionActual.message);
+  }, []);
 
   return (
     <>
@@ -278,7 +302,7 @@ function Body() {
                       <div
                         key={index}
                         className="boton-dimension"
-                        onClick={manejarSubDimension(index)}
+                        onClick={() => manejarSubDimension(rowIndex*5 + index, state)}
                       >
                         <img
                           src={buttonImg}
@@ -299,10 +323,14 @@ function Body() {
             <div className="semaforo-verde"></div>
           </div>
 
-          <div className="mensaje-subdimension">{state.mensaje}</div>
+          <div className="mensaje-subdimension">
+            <b>{tituloSubDimension}</b>
+            <br />
+            {textoSubDimension}
+          </div>
 
           <div className="mensaje-semaforo">
-            <p>Lorem Ipsum</p>
+            <p>{mensajeSubDimension}</p>
           </div>
         </div>
       </div>
