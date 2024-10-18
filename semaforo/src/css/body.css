@@ -197,7 +197,7 @@
   padding-left: 5%;
   padding-right: 5%;
   height: 20%;
-  font-size: 14px;
+  font-size: 16px;
   color: #fff;
   border-radius: 5px;
   background-color: #384a60;
@@ -210,6 +210,8 @@
   outline: 2px solid #cc9c69;
   overflow-y: auto;
   overflow-x: hidden;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
 
 .mensaje-subdimension b {
@@ -226,32 +228,11 @@
   }
 }
 
-/* Puntos superiores */
-.mensaje-subdimension::before,
-.mensaje-subdimension::after {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: #fff;
-  border-radius: 50%;
-  top: 8px;
-}
-
-/* Punto superior izquierdo */
-.mensaje-subdimension::before {
-  left: 8px;
-}
-
-/* Punto superior derecho */
-.mensaje-subdimension::after {
-  right: 8px;
-}
 
 .mensaje-semaforo {
   position: absolute;
   margin-right: 20%;
-  margin-top: 10%;
+  margin-top: 5%;
   width: 50%;
   margin-left: 35%;
   padding-left: 5%;
@@ -271,4 +252,7 @@
   outline: 2px solid #cc9c69;
   overflow-y: auto;
   overflow-x: hidden;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  white-space: pre-line;
 }
