@@ -129,6 +129,9 @@ const DIMENSIONS = [
     message:
       "Corresponde a la descripción de la dinámica familiar y cómo esta dinámica es una barrera o un facilitador en la elección y la permanencia en el programa académico.",
     titulosSubdimensiones: ["Dinámica Familiar"],
+    textosSubdimensiones: [
+      "Se define como los encuentros entre las subjetividades, encuentros mediados por una serie de normas, reglas, límites, jerarquías y roles, entre otros, que regulan la convivencia y permite que el funcionamiento de la vida familiar se desarrolle armónicamente. El seguimiento familiar implica reconocer la existencia de lazos de parentesco, afecto, comunicación, límites, jerarquías, roles, toma de decisiones, los cuales se van construyendo entre sus miembros de la familia y definen la realización del ser y la búsqueda del bienestar colectivo.",
+    ],
   },
   {
     name: "Académico",
@@ -141,6 +144,11 @@ const DIMENSIONS = [
       "Desempeño Académico",
       "Elección Vocacional",
       "Manejo del Tiempo",
+    ],
+    textosSubdimensiones: [
+      "Esta temática incluye las narraciones realizadas por los estudiantes en torno a las metodologias utilizadas en las clases, información de las diversas asignaturas y seguimientos académicos; ejemplo: reporte del rendimiento académico (notas), reporte de la carga académica, informe de las necesidades académicas idetificadas con el estudiante (bases conceptules para las diversas asganturas) y refuerzo académico (asesorías académicas). Estos seguimientos tiene como como finalidad identificar y fortalecer las habilidades y destrezas de los estudiantes.",
+      "Esta temática hace referencia a las preferencias de áreas disciplinares y carreras de los estudiantes, la búsqueda de información y conocimiento de sus carreras de elección y las estrategias implementadas por los monitores para contribuir en sus procesos de orientación vocacional concebida ésta como un vínculo conversacional en el que el estudiante recibe apoyo en el marco de encontrar alternativas y tomar decisiones, de manera consciente voluntaria y comprometida (De Mori & Santiviago, s.f.).",
+      "Esta temática contiene lo referente a la forma como los estudiantes manejaban el tiempo de acuerdo al establecimiento de sus rutinas diarias, comprendiendo tres aspectos claves: 1) el establecimiento de metas, 2) las herramientas para la gerencia del tiempo y 3) la percepción de control o verificación del uso del tiempo personal (Durán-Aponte & Pujol, 2012).",
     ],
   },
   {
@@ -160,6 +168,12 @@ const DIMENSIONS = [
       "Apoyo Económico Institucional",
       "Manejo de Finanzas",
       "Situación Laboral",
+    ],
+    textosSubdimensiones: [
+      "Lo socioeconómico, entendido como un enfoque teórico y metodológico necesariamente transdisciplinar, que pretende entender integralmente la complejidad social a partir de la observación, descripción y análisis orientada a la acción en y desde la realidad (Coraggio & Arancibia, 2006). Esta temática involucra aspectos económicos y sociológicos como la preparación laboral, ubicación social y familiar en la sociedad.",
+      "Apoyos económicos institucionales: incluye todos los procesos que los estudiantes realizan para recibir apoyos económicos. (ICETEX, Jóvenes en Acción, Bienestar Universitario, monitorias, etc.)",
+      "Principios y herramientas que ayudan a optimizar los recursos financieros con que cuenta una persona. Esta temática contiene todos los aspectos de manejo de dinero, inversión de recursos, ingresos y egresos financieros, mecanismos de ahorro, entre otros.",
+      "Se refiere a las diversas actividades que realiza el estudiante para cubrir sus gastos personales y académicos; y la relación de estas ocupaciones con su actividad académica en la Universidad.",
     ],
   },
   {
@@ -183,6 +197,14 @@ const DIMENSIONS = [
       "Referenciación Geográfica",
       "Vinculación a Grupos y Extracurriculares",
       "Vivienda",
+    ],
+    textosSubdimensiones: [
+      "Esta temática involucra todo lo expresado por los estudiantes en relación a la adaptación que se encuentran realizando al nuevo contexto de ciudad en el que se encuentra, para el caso de estudiantes que proceden de otros municipios y regiones del país. Además de las diferentes experiencias que expresan los estudiantes con relación a su adaptación a la Universidad.",
+      "Este apartado contiene la oferta de servicios institucionales y no formales que los monitores realizaban a sus estudiantes en relación al ámbito universitario, de ciudad y nacional.",
+      "Esta temática aborda los momentos de presentación entre el monitor y el estudiante, incluyendo además la explicación de la estrategia ASES y expectativas de ingreso a la universidad de parte de los estudiantes y del acompañamiento que van a tener.",
+      "En este apartado nos encontramos con el conocimiento de nuevos lugares en sus territorios cotidianos de parte de los estudiantes (tanto en la universidad como en la ciudad), muchos de ellos guiados por sus monitores. Informe sobre el recorrido por el campus universitario y/ o ciudad.",
+      "Este apartado contiene lo relacionado con el interés, exploración y vinculación de los estudiantes a grupos estudiantiles, académicos, investigativos, culturales, y deportivos de la Universidad del Valle o externos",
+      "Esta temática contiene todas las particularidades de vivienda de los estudiantes, incluyendo organización del espacio, problemas con los inquilinos, entre otros y la utilización del programa Geocalízate.",
     ],
   },
 ];
@@ -208,6 +230,7 @@ function Body() {
   const manejarSeleccionDimension = (dimension) => {
     const { icon, message, buttons } = dimension;
 
+    setSubDimensionClicked(false);
     const isIndividual = dimension.name === "Individual"; // Verificar si es la dimensión "Individual"
 
     if (!state.animating && state.primeraVez) {
@@ -246,8 +269,9 @@ function Body() {
   const [tituloSubDimension, setTituloSubDimension] = useState("");
   const [textoSubDimension, setTextoSubDimension] = useState("");
   const [mensajeSubDimension, setMensajeSubDimension] = useState("");
-
+  const [subDimensionClicked, setSubDimensionClicked] = useState(false);
   const manejarSubDimension = useCallback((index, state) => {
+    setSubDimensionClicked(true);
     setTituloSubDimension(state.dimensionActual.titulosSubdimensiones[index]);
     setTextoSubDimension(state.dimensionActual.textosSubdimensiones[index]);
     setMensajeSubDimension(state.dimensionActual.message);
@@ -302,7 +326,9 @@ function Body() {
                       <div
                         key={index}
                         className="boton-dimension"
-                        onClick={() => manejarSubDimension(rowIndex*5 + index, state)}
+                        onClick={() =>
+                          manejarSubDimension(rowIndex * 5 + index, state)
+                        }
                       >
                         <img
                           src={buttonImg}
@@ -318,18 +344,35 @@ function Body() {
         <div className="semaforo">
           <div className="contenedor-semaforo">
             <img src={semaforo} alt="Semaforo" className="imagen-semaforo" />
-            <div className="semaforo-rojo" onClick={() => null}></div>
-            <div className="semaforo-amarillo"></div>
-            <div className="semaforo-verde"></div>
+            <div
+              className="semaforo-rojo"
+              onClick={() => console.log("rojo")}
+            ></div>
+            <div
+              className="semaforo-amarillo"
+              onClick={() => console.log("amarillo")}
+            ></div>
+            <div
+              className="semaforo-verde"
+              onClick={() => console.log("verde")}
+            ></div>
           </div>
 
-          <div className="mensaje-subdimension">
-            <b>{tituloSubDimension}</b>
-            <br />
-            {textoSubDimension}
+          <div
+            className="mensaje-subdimension"
+            style={{ display: subDimensionClicked ? "block" : "none" }}
+          >
+            <p>
+              <b>{tituloSubDimension}</b>
+              <br />
+              {textoSubDimension}
+            </p>
           </div>
 
-          <div className="mensaje-semaforo">
+          <div
+            className="mensaje-semaforo"
+            style={{ display: subDimensionClicked ? "block" : "none" }}
+          >
             <p>{mensajeSubDimension}</p>
           </div>
         </div>
