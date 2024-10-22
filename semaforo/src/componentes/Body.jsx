@@ -373,6 +373,10 @@ function Body() {
   const [subDimensionClicked, setSubDimensionClicked] = useState(false);
 
   const [mensajeSemaforo, setMensajeSemaforo] = useState("");
+  const [tituloSemaforo, setTituloSemaforo] = useState("");
+  const [estiloTituloSemaforo, setEstiloTituloSemaforo] = useState({});
+  const [estiloSemaforo, setEstiloSemaforo] = useState({});
+
   const mostrarMensajeSemaforo = useCallback(
     (color) => {
       if (color === "rojo") {
@@ -381,18 +385,39 @@ function Body() {
             state.indiceSubDimensionActual
           ]?.trim()
         );
+        setTituloSemaforo("RIESGO ALTO");
+        setEstiloSemaforo({
+          backgroundColor: "#ff8983",
+        });
+        setEstiloTituloSemaforo({
+          color: "#9f1915",
+        });
       } else if (color === "amarillo") {
         setMensajeSemaforo(
           state.dimensionActual.textosAmarillo[
             state.indiceSubDimensionActual
           ]?.trim()
         );
+        setTituloSemaforo("RIESGO MODERADO");
+        setEstiloSemaforo({
+          backgroundColor: "#d1ca4a",
+        });
+        setEstiloTituloSemaforo({
+          color: "#726d04",
+        });
       } else if (color === "verde") {
         setMensajeSemaforo(
           state.dimensionActual.textosVerde[
             state.indiceSubDimensionActual
           ]?.trim()
         );
+        setTituloSemaforo("RIESGO BAJO");
+        setEstiloSemaforo({
+          backgroundColor: "#4ddac3",
+        });
+        setEstiloTituloSemaforo({
+          color: "#0f7d0f",
+        });
       }
     },
     [state.indiceSubDimensionActual, state.dimensionActual]
@@ -494,7 +519,6 @@ function Body() {
               onClick={() => mostrarMensajeSemaforo("verde", state)}
             ></div>
           </div>
-
           <div
             className="mensaje-subdimension"
             style={{ display: subDimensionClicked ? "block" : "none" }}
@@ -505,13 +529,15 @@ function Body() {
               {textoSubDimension}
             </p>
           </div>
-
-          <div
-            className="mensaje-semaforo"
-            style={{ display: subDimensionClicked ? "block" : "none" }}
-          >
-            <p>{mensajeSemaforo}</p>
-          </div>
+          {subDimensionClicked && (
+            <div className="mensaje-semaforo" style={estiloSemaforo}>
+              <p>
+                <b style={estiloTituloSemaforo}>{tituloSemaforo}</b>
+                <br />
+                {mensajeSemaforo}
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </>

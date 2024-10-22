@@ -228,7 +228,6 @@
   }
 }
 
-
 .mensaje-semaforo {
   position: absolute;
   margin-right: 20%;
@@ -249,10 +248,17 @@
   justify-content: center;
   align-content: center;
   flex-direction: column;
-  outline: 2px solid #cc9c69;
   overflow-y: auto;
   overflow-x: hidden;
   padding-top: 2%;
   padding-bottom: 2%;
   white-space: pre-line;
+  font-weight: bold;
+  scroll-padding-top: 2%;
+  scroll-margin-top: 10px;
+  display: block;
+}
+
+.mensaje-semaforo b {
+  font-size: 32px;
 }
