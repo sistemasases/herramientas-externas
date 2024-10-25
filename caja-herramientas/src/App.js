@@ -1,18 +1,17 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Grid, Box } from '@mui/material';
-import React, { useEffect } from 'react';
-import Body from './components/Body/Body';
-import Footer from './components/Footer/Footer';
-import BackgroundBox from './components/Body/Background';
-
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Grid, Box } from "@mui/material";
+import React, { useEffect } from "react";
+import Body from "./components/Body/Body";
+import Footer from "./components/Footer/Footer";
+import BackgroundBox from "./components/Body/Background";
 
 function App() {
   useEffect(() => {
-    document.title = 'Caja de Herramientas';
+    document.title = "Caja de Herramientas";
   }, []);
-  
+
   return (
-    <Router basename="/caja-herramientas">
+    <Router basename="/">
       <Grid
         container
         sx={{
@@ -31,8 +30,7 @@ function App() {
             bottom: 0,
             width: "100%",
           }}
-        >
-        </Box>
+        ></Box>
         <Footer />
       </Grid>
     </Router>
