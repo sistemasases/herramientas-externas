@@ -124,7 +124,7 @@ const DIMENSIONS = [
       "El reporte que el/la estudiante hace de sí mismo/a (forma de ser, habilidades, fortalezas, debilidades, etc.), responde a las expectativas del otro (familiares, monitor, practicante o profesional, etc.) o a estereotipos y no a la realidad; de manera que se dificulta el reconocimiento de sus condiciones, de sus posibilidades y de las limitaciones reales que estas implican para su vida.",
       "Las narrativas autobiográficas dan cuenta de situaciones y condiciones de precariedad e incertidumbre (económica, afectiva, de seguridad física, etc.) que dificultan las formas de relación actuales del estudiante, el afronta.",
       "Las narrativas autobiográficas dan cuenta de situaciones y condiciones de precariedad e incertidumbre (económica, afectiva, de seguridad física, etc.) que dificultan las formas de relación actuales del estudiante, el afrontamiento de su vida y su proyecto educativo",
-      "El estudiante no cuenta con los documentos que lo identifican o que acreditan su registro ante los servicios del Estado (cedula, libreta militar, sisben, etc). Desconoce su existencia, no tiene acceso a ellos y no sabe dar cuenta de su contenido o ubicación.",
+      "El estudiante no cuenta con los documentos que lo identifican o que acreditan su registro ante los servicios del Estado (cedula, libreta militar, SISBEN, etc.). Desconoce su existencia, no tiene acceso a ellos y no sabe dar cuenta de su contenido o ubicación.",
       " El/La estudiante manifiesta no tener propósito alguno o tener propósitos poco realistas para su desarrollo personal y formativo; sin acciones efectivas o con acciones contrarias al logro de la meta. ",
       " El/La estudiante no cuenta con una red de apoyo; se mantiene aislado/a del los grupos sociales que lo/la rodean y por lo tanto, no cuenta con amigos en quienes confiar. O cuenta con relaciones sociales que no velan o no están en condiciones de velar por su bienestar o, con quienes se involucra en situaciones que lo ponen en peligro. ",
       " Reporte objetivo y honesto de relaciones de pareja poco sanas, pero en las que se permanece (por dependencia económica, afectiva; temor, inseguridad, incapacidad para estar solos, etc.). Reporte “engañoso” de relaciones de pareja sanas, aunque se detecten situaciones de agresión o vulneración, que no son percibidas como tales o que se encubren. Prácticas inseguras en las relaciones sexuales. ",
@@ -132,23 +132,23 @@ const DIMENSIONS = [
     ],
 
     textosAmarillo: [
-      "El/La estudiante reconoce que los motivadores de algunas de sus acciones, elecciones, formas de relacionarse, etc. están influenciados por las expectativas de otros (Padres, familiares, vecinos, amigos,sociedad, religión), pero tiene con una posición clara frente a ellos. Sin embargo, no descarta las motivaciones propias.",
-      "El reporte que el/la estudiante realiza de sí mismo/a incluye el reconocimiento sus fortalezas y debilidades, sin embargo no identifica claramente las posibilidades o limitaciones que estas implican.",
+      "El/La estudiante reconoce que los motivadores de algunas de sus acciones, elecciones, formas de relacionarse, etc. están influenciados por las expectativas de otros (Padres, familiares, vecinos, amigos, sociedad, religión), pero tiene con una posición clara frente a ellos. Sin embargo, no descarta las motivaciones propias.",
+      "El reporte que el/la estudiante realiza de sí mismo/a incluye el reconocimiento sus fortalezas y debilidades, sin embargo, no identifica claramente las posibilidades o limitaciones que estas implican.",
       "El/La estudiante expresa sentimientos de confusión y angustia frente a temas relacionados con el género, identidad sexual, preferencias sexuales, etc. Pero busca ayuda para aclarar sus dudas y cuenta con una red de apoyo confiable.",
       "Las narrativas autobiográficas dan cuenta de una historia personal en la que se reportan situaciones de vida que han sido difíciles. Sin embargo, estas situaciones han sido asumidas y no implican condiciones de precariedad o privación mayores. Aunque a veces la historia puede afectar las relaciones y el proyecto formativo; el estudiante se percibe fuerte frente a ella.",
       "El estudiante tiene la mayoría de sus documentos de identificación. Los documentos faltantes han sido tramitados, pero no se cuenta con una copia y pueden ser obtenidos por medios oficiales. el estudiante conoce su contenido y los medios de obtención.",
       " El/La estudiante manifiesta tener propósitos para su desarrollo personal y formativo realistas, acompañados de acciones dirigidas a alcanzarlos; pero que necesitan ser claramente definidos. O manifesta tener propósitos claros, sin acciones dirigidas a lograrlos a corto plazo (5 años o menos), pero con un plan claro a mediano o largo plazo. ",
       " El/La estudiante cuenta con una red de apoyo que le genera bienestar, pero que en situaciones difíciles puede no ofrecer soporte. ",
       " Reporte objetivo de relaciones que no implican agresiones o vulneraciones al estudiante, pero que le generan inseguridad o angustia. También relaciones que pueden implicar riesgo en el cambio de las condiciones y el proyecto de vida, y que no son un soporte para el estudiante. Prácticas predominantemente seguras en relaciones sexuales. ",
-      " El/La estudiante reporta o es evidente un estado de salud (física o mental) deteriorado que puede afectar o no sus actividades, pero que está siendo acompañado por un profesional y para el cual se sigue juiciosamente un tratamiento. También, se observa el cumplimieto de la recomendaciones médicas pertinentes a su caso. ",
+      " El/La estudiante reporta o es evidente un estado de salud (física o mental) deteriorado que puede afectar o no sus actividades, pero que está siendo acompañado por un profesional y para el cual se sigue juiciosamente un tratamiento. También, se observa el cumplimiento de la recomendaciones médicas pertinentes a su caso. ",
     ],
 
     textosVerde: [
-      "El/La estudiante tiene motivadores que se originan en su propio interés y actua en consecuencia. Estos motivadores son independientemente de las expectativas ajenas y se les puede obedecer o no.motivadores propios para sus acciones y elecciones.",
-      "El reporte que el/la estudiante hace de sí mismo/a, le permite el reconocimiento honesto y reflexionado de sus fortalezas y debilidades (personales, académicas, mentales, afectivas, relacionales, corporales,etc); así como, identificar claramente las posibilidades y limitaciones que éstas implican.",
+      "El/La estudiante tiene motivadores que se originan en su propio interés y actúa en consecuencia. Estos motivadores son independientemente de las expectativas ajenas y se les puede obedecer o no. Motivadores propios para sus acciones y elecciones.",
+      "El reporte que el/la estudiante hace de sí mismo/a, le permite el reconocimiento honesto y reflexionado de sus fortalezas y debilidades (personales, académicas, mentales, afectivas, relacionales, corporales, etc.); así como, identificar claramente las posibilidades y limitaciones que éstas implican.",
       "El/La estudiante ha establecido relaciones sanas, de respeto, y reconocimiento frente a su género, identidad sexual y preferencia sexual; así como, frente a los demás. La familia, el círculo social cercano y el contexto cotidiano del estudiante son fuente de seguridad y bienestar ante sus relaciones, preferencias e identidad sexual; ofrecen apoyo y estabilidad.",
       "En términos generales, los relatos de la historia de vida son positivos: entorno de crecimiento saludable; con experiencias de crianza que dan cuenta de buenas relaciones familiares, sociales, con el saber y que han favorecido la autonomía y la seguridad (económica, afectiva, física, etc.) del estudiante para enfrentar la vida adulta y su proyecto educativo.",
-      "El estudiante cuenta con todos sus documentos al día y a su disposición (documento de identificación, libreta militar, certificados académicos, certificados de pertenencia a grupos poblacionales específicos, documentos de su crédito educativo, documentación legal y bancaria, etc.). El estudiante ha hecho los trámites de portabilidad ante su servicio de salud, por lo tanto cuenta con atención a nivel local.",
+      "El estudiante cuenta con todos sus documentos al día y a su disposición (documento de identificación, libreta militar, certificados académicos, certificados de pertenencia a grupos poblacionales específicos, documentos de su crédito educativo, documentación legal y bancaria, etc.). El estudiante ha hecho los trámites de portabilidad ante su servicio de salud, por lo tanto, cuenta con atención a nivel local.",
       " El/La estudiante manifiesta tener propósitos para su desarrollo personal y formativo claros y realistas; acompañados de acciones efectivas dirigidas al logro de los mismos en la actualidad. ",
       " El/La estudiante cuenta con una red de apoyo fuerte y amplia; tiene amigos cercanos en los que puede confiar y que propenden por su bienestar; con los que puede contar en situaciones difíciles.",
       " Reporte objetivo y honesto de relaciones de pareja sanas (Que son un soporte para el estudiante y en la que el estudiante se siente, confiado, correspondido; es bien tratado, respetado, valorado y apoyado). Prácticas seguras en relaciones sexuales. ",
@@ -190,23 +190,23 @@ const DIMENSIONS = [
       "Manejo del Tiempo",
     ],
     textosSubdimensiones: [
-      "Esta temática incluye las narraciones realizadas por los estudiantes en torno a las metodologias utilizadas en las clases, información de las diversas asignaturas y seguimientos académicos; ejemplo: reporte del rendimiento académico (notas), reporte de la carga académica, informe de las necesidades académicas idetificadas con el estudiante (bases conceptules para las diversas asganturas) y refuerzo académico (asesorías académicas). Estos seguimientos tiene como como finalidad identificar y fortalecer las habilidades y destrezas de los estudiantes.",
+      "Esta temática incluye las narraciones realizadas por los estudiantes en torno a las metodologías utilizadas en las clases, información de las diversas asignaturas y seguimientos académicos; ejemplo: reporte del rendimiento académico (notas), reporte de la carga académica, informe de las necesidades académicas identificadas con el estudiante (bases conceptuales para las diversas asignaturas) y refuerzo académico (asesorías académicas). Estos seguimientos tienen como como finalidad identificar y fortalecer las habilidades y destrezas de los estudiantes.",
       "Esta temática hace referencia a las preferencias de áreas disciplinares y carreras de los estudiantes, la búsqueda de información y conocimiento de sus carreras de elección y las estrategias implementadas por los monitores para contribuir en sus procesos de orientación vocacional concebida ésta como un vínculo conversacional en el que el estudiante recibe apoyo en el marco de encontrar alternativas y tomar decisiones, de manera consciente voluntaria y comprometida (De Mori & Santiviago, s.f.).",
-      "Esta temática contiene lo referente a la forma como los estudiantes manejaban el tiempo de acuerdo al establecimiento de sus rutinas diarias, comprendiendo tres aspectos claves: 1) el establecimiento de metas, 2) las herramientas para la gerencia del tiempo y 3) la percepción de control o verificación del uso del tiempo personal (Durán-Aponte & Pujol, 2012).",
+      "Esta temática contiene lo referente a la forma como los estudiantes manejaban el tiempo de acuerdo con el establecimiento de sus rutinas diarias, comprendiendo tres aspectos claves: 1) el establecimiento de metas, 2) las herramientas para la gerencia del tiempo y 3) la percepción de control o verificación del uso del tiempo personal (Durán-Aponte & Pujol, 2012).",
     ],
     textosRojo: [
-      " El/la estudiante tiene un bajo rendimiento academico durante los primeros semestres, asignaturas en repitencia y un promedio menor a 3.5. El/la estudiante manifiesta que presenta dificultades para avanzar en su proceso academico, no logra identificar sus habilidades y dificultades atribuyendo sus malos resultados académicos a factores externos (el profesor, el grupo, la familia, etc). Cuando se le recomiendan los espacios dinamizados por la Estrategia ASES (monitoria socio-educativa, moitorias academicas, talleres, etc), no asiste y/o no estudia previamente para las clases, monitorias y parciales, afirma que solo con lo visto en clase es suficiente para su proceso academico. El/la estudiante manifiesta que regularmente no asiste a las clases que tiene programadas en su horario y/o teme fracasar, por lo cual decide tomar opciones rapidas y faciles para tener buenas notas. A largo plazo se evidencian señales de abandono de su programa acádemico. El/la estudiante no tiene establecido en su horario espacios para repaso constante de las asignaturas, manifesta que solo realiza los talleres y actividades cuando se programan en clase, no realiza estudio independiente y/o intenta memorizar la mayor parte de sus clases, no comprende el uso y la conexión de los temas y las asignaturas. ",
+      "El/la estudiante tiene un bajo rendimiento académico durante los primeros semestres, asignaturas en repitencia y un promedio menor a 3.5. El/la estudiante manifiesta que presenta dificultades para avanzar en su proceso académico, no logra identificar sus habilidades y dificultades atribuyendo sus malos resultados académicos a factores externos (el profesor, el grupo, la familia, etc.). Cuando se le recomiendan los espacios dinamizados por la Estrategia ASES (monitoria socioeducativa, monitorias académicas, talleres, etc.), no asiste y/o no estudia previamente para las clases, monitorias y parciales, afirma que solo con lo visto en clase es suficiente para su proceso académico. El/la estudiante manifiesta que regularmente no asiste a las clases que tiene programadas en su horario y/o teme fracasar, por lo cual decide tomar opciones rápidas y fáciles para tener buenas notas. A largo plazo se evidencian señales de abandono de su programa académico. El/la estudiante no tiene establecido en su horario espacios para repaso constante de las asignaturas, manifiesta que solo realiza los talleres y actividades cuando se programan en clase, no realiza estudio independiente y/o intenta memorizar la mayor parte de sus clases, no comprende el uso y la conexión de los temas y las asignaturas.",
       " El/la estudiante refiere que no se siente satisfecho con la carrera que cursa, manifiesta que no fue su elección, pero no busca acciones de cambios. El/la estudiante manifiesta que su familia o red de apoyo impuso la elección vocacional y/o el ingreso a la universidad. ",
-      " El/la estudiante niega que tiene dificultades para organizar su tiempo, sin embargo incumple sus obligaciones académicas (entregas, preparación de examenes, etc) de forma reiterada ",
+      "El/la estudiante niega que tiene dificultades para organizar su tiempo, sin embargo, incumple sus obligaciones académicas (entregas, preparación de exámenes, etc.) de forma reiterada.",
     ],
     textosAmarillo: [
-      " El/la estudiante en ocasiones reconoce que los malos resultados académicos que obtienen son su responsabilidad, sin embargo no emprende transformaciones en sus prácticas y/o se limita a obtener buenas calificaciones, su interes esta centrando en descrubrir como ser buena estudiante y sobresalir según las exigencias del profesor. Es un/una estudiante que busca el reconocimiento externo. El/la estudiante manifiesta que presenta dificultades para avanzar en su proceso academico, identifica las dificultades y busca alternativas de apoyo y cambio; asiste a los espacios dinamizados por la Estrategia ASES, sin embargo refiere que no obtiene buenos resultados académicos (notas) y/o logra aprender todo los procedimientos, pero no comprende nuevas formas de resolver problemas, presentando dificultades en manejar situaciones nuevas El/la estudiante refiere constantemente que el nivel academico de su educación secundaría no es bueno, afirma que no conoce temas que los/las profesores/ras dicen que ya deben conocer. Cuando a el/la estudiante se le presenta una dificultad acádemica acude a sus amigos, monitores/ras socio-educativos, academicos o docentes; sin embargo estos apoyos no son suficientes para responder a la exigencia académica. ",
-      " El/la estudiante fue influenciado/a en la elección de la carrera universitaria que actualmente cursa, manifiesta no sentirse satisfecho pero busca mecanismos y acciones de cambio. El/la estudiante refiere que no tiene claridad sobre el programa academico que cursará, sin embargo esta dispuesto a conocer y revisar su elección vocacional. ",
-      " El/la estudiante reconoce dificultades en la organización del tiempo para sus actividades académicas, sin embargo no utiliza estrategias para mejorar este aspecto, o las utilizadas no resultan efectivas. ",
+      "El/la estudiante en ocasiones reconoce que los malos resultados académicos que obtienen son su responsabilidad, sin embargo, no emprende transformaciones en sus prácticas y/o se limita a obtener buenas calificaciones, su interés está centrando en descubrir como ser buena estudiante y sobresalir según las exigencias del profesor. Es un/una estudiante que busca el reconocimiento externo. El/la estudiante manifiesta que presenta dificultades para avanzar en su proceso académico, identifica las dificultades y busca alternativas de apoyo y cambio; asiste a los espacios dinamizados por la Estrategia ASES, sin embargo refiere que no obtiene buenos resultados académicos (notas) y/o logra aprender todo los procedimientos, pero no comprende nuevas formas de resolver problemas, presentando dificultades en manejar situaciones nuevas El/la estudiante refiere constantemente que el nivel académico de su educación secundaria no es bueno, afirma que no conoce temas que los/las profesores/ras dicen que ya deben conocer. Cuando a él/la estudiante se le presenta una dificultad académica acude a sus amigos, monitores/ras socioeducativos, académicos o docentes; sin embargo, estos apoyos no son suficientes para responder a la exigencia académica.",
+      "El/la estudiante fue influenciado/a en la elección de la carrera universitaria que actualmente cursa, manifiesta no sentirse satisfecho, pero busca mecanismos y acciones de cambio. El/la estudiante refiere que no tiene claridad sobre el programa académico que cursará, sin embargo, esta dispuesto a conocer y revisar su elección vocacional.",
+      "El/la estudiante reconoce dificultades en la organización del tiempo para sus actividades académicas, sin embargo, no utiliza estrategias para mejorar este aspecto, o las utilizadas no resultan efectivas.",
     ],
     textosVerde: [
-      " El/la estudiante manifiesta que actualmente tiene un buen desempeño académico, es muy conciente de que sus resultados académicos (buenos o malos) son su responsalibilidad, identifica claramente donde están las dificultades y define e implementa acciones claras de mejoramiento de sus prácticas. El/la estudiante refiere constantemente que el nivel academico de su educación secundaría es bueno, afirma que conoce y maneja los temas que los/las profesores/ras dicen que ya deben conocer. Cuando a el/la estudiante se le presenta una dificultad acádemica acude a sus amigos, monitores/ras socio-educativos, academicos o docentes. Se observa que el estudiante realiza estudio previo y tiene dudas puntuales en las asesorias solicitadas. El/la estudiante se empeña en comprender el significado, pensar sus implicaciones y aplicaciones. Es un/una estudiante que busca la motivación en si mismo/misma, por lo cual enfrenta sus retos academicos realizando analisis, sintesis, evaluación e hipotesis para construir teorias respecto a lo que se le presenta. El/la estudiante esta dispuesto a fallar y reconoce su fracaso para aprender del error. Se observa que esto no le afecta en su autoestima, pues comprende que es un proceso normal dentro del aprendizaje. ",
-      " El/la estudiante manifiesta que eligió su carrera universitaria sin presión de su red de apoyo. El/la estudiante refiere que ha investigado y conoce aspectos generales sobre el programa academico que ha elegido. Manifiesta que se siente conforme con la elección realizada. ",
+      "El/la estudiante manifiesta que actualmente tiene un buen desempeño académico, es muy consciente de que sus resultados académicos (buenos o malos) son su responsabilidad, identifica claramente donde están las dificultades y define e implementa acciones claras de mejoramiento de sus prácticas. El/la estudiante refiere constantemente que el nivel académico de su educación secundaria es bueno, afirma que conoce y maneja los temas que los/las profesores/ras dicen que ya deben conocer. Cuando a él/la estudiante se le presenta una dificultad académica acude a sus amigos, monitores/ras socioeducativos, académicos o docentes. Se observa que el estudiante realiza estudio previo y tiene dudas puntuales en las asesorías solicitadas. El/la estudiante se empeña en comprender el significado, pensar sus implicaciones y aplicaciones. Es un/una estudiante que busca la motivación en sí mismo/misma, por lo cual enfrenta sus retos académicos realizando análisis, síntesis, evaluación e hipótesis para construir teorías respecto a lo que se le presenta. El/la estudiante está dispuesto a fallar y reconoce su fracaso para aprender del error. Se observa que esto no le afecta en su autoestima, pues comprende que es un proceso normal dentro del aprendizaje.",
+      "El/la estudiante manifiesta que eligió su carrera universitaria sin presión de su red de apoyo. El/la estudiante refiere que ha investigado y conoce aspectos generales sobre el programa académico que ha elegido. Manifiesta que se siente conforme con la elección realizada.",
       " El/la estudiante reconoce dificultades en la organización del tiempo para sus actividades académicas, pero utiliza estrategias para mejorar este aspecto. El/la estudiante manifiesta que no presenta dificultades en el manejo del tiempo, se observa que las estrategias utilizadas son efectivas. ",
     ],
   },
@@ -276,39 +276,44 @@ const DIMENSIONS = [
       "Vivienda",
     ],
     textosSubdimensiones: [
-      "Esta temática involucra todo lo expresado por los estudiantes en relación a la adaptación que se encuentran realizando al nuevo contexto de ciudad en el que se encuentra, para el caso de estudiantes que proceden de otros municipios y regiones del país. Además de las diferentes experiencias que expresan los estudiantes con relación a su adaptación a la Universidad.",
-      "Este apartado contiene la oferta de servicios institucionales y no formales que los monitores realizaban a sus estudiantes en relación al ámbito universitario, de ciudad y nacional.",
+      "Esta temática involucra todo lo expresado por los estudiantes en relación con la adaptación que se encuentran realizando al nuevo contexto de ciudad en el que se encuentra, para el caso de estudiantes que proceden de otros municipios y regiones del país. Además de las diferentes experiencias que expresan los estudiantes con relación a su adaptación a la Universidad.",
+      "Este apartado contiene la oferta de servicios institucionales y no formales que los monitores realizaban a sus estudiantes en relación con el ámbito universitario, de ciudad y nacional.",
       "Esta temática aborda los momentos de presentación entre el monitor y el estudiante, incluyendo además la explicación de la estrategia ASES y expectativas de ingreso a la universidad de parte de los estudiantes y del acompañamiento que van a tener.",
       "En este apartado nos encontramos con el conocimiento de nuevos lugares en sus territorios cotidianos de parte de los estudiantes (tanto en la universidad como en la ciudad), muchos de ellos guiados por sus monitores. Informe sobre el recorrido por el campus universitario y/ o ciudad.",
       "Este apartado contiene lo relacionado con el interés, exploración y vinculación de los estudiantes a grupos estudiantiles, académicos, investigativos, culturales, y deportivos de la Universidad del Valle o externos",
       "Esta temática contiene todas las particularidades de vivienda de los estudiantes, incluyen Manifiesta un amplio conocimiento geográfico de la Universidad y la Ciudad, lo cual facilita la realización de sus actividades cotidianas do organización del espacio, problemas con los inquilinos, entre otros y la utilización del programa Geocalízate.",
     ],
     textosRojo: [
-      " Manifiesta que la adaptación a la Universidad y ciudad ha sido muy dificil para el/ella (transporte, conocimiento, cultura, clima, comida, etc), sin embargo no busca ni plantea propuestas para la solución de estas problemáticas (ejemplos). ",
+      "Manifiesta que la adaptación a la Universidad y ciudad ha sido muy difícil para el/ella (transporte, conocimiento, cultura, clima, comida, etc.), sin embargo, no busca ni plantea propuestas para la solución de estas problemáticas (ejemplos).",
       " El/la estudiante no reconoce los servicios y ofertas de la Universidad y la ciudad ",
       " Manifiesta poco interés por encontrarse con el monitor y por acceder al acompañamiento, sus expectativas sobre su ingreso a la Universidad y su proyecto académico son pobres. ",
       " Manifiesta amplio desconocimiento geográfico de la Universidad y la Ciudad, lo cual genera en el/la estudiante inseguridad para realizar actividades cotidianas (personales y académicas). ",
-      " El estudiante aunque dice sentirse sólo se muestra apático frente a vincularse a grupos en la Universidad o por fuera de ella. Manifiesta no encontrar disfrute o interés en prácticas culturales, deportivas, sociales, artísticas, recreativas,etc.; o por el contrario se dedica mucho tiempo a esas actividades y no atienden sus responsabilidades académicas. ",
+      "El estudiante, aunque dice sentirse solo, se muestra apático frente a vincularse a grupos en la Universidad o por fuera de ella. Manifiesta no encontrar disfrute o interés en prácticas culturales, deportivas, sociales, artísticas, recreativas, etc.; o por el contrario se dedica mucho tiempo a esas actividades y no atienden sus responsabilidades académicas.",
       " Las condiciones de la vivienda (ubicación, físicas, convivencia, etc) impiden la realización de sus actividades personales y académicas. No busca alternativas frente a esta situación o no cuenta con las condiciones para resolver esta situación ",
     ],
     textosAmarillo: [
-      " Manifiesta que ha tenido algunas dificultades en su adaptación a la Universidad y a la ciudad, sin embargo plantea alternativas que debe materializar lograr una mejor adaptación. ",
-      " El/la estudiante reconoce los servicios y ofertas de la Universidad y la ciudad, sin embargo manifiesta que no asiste a ellos porque no son de su interés o porque no sabe como acceder a ellos ",
-      " Manifiesta algún interes por el proceso de acompañamiento, sin embargo no tiene mucha claridad sobre los aportes del mismo en su proceso como universitario. ",
+      "Manifiesta que ha tenido algunas dificultades en su adaptación a la Universidad y a la ciudad, sin embargo, plantea alternativas que debe materializar lograr una mejor adaptación.",
+      "El/la estudiante reconoce los servicios y ofertas de la Universidad y la ciudad, sin embargo, manifiesta que no asiste a ellos porque no son de su interés o porque no sabe cómo acceder a ellos.",
+      "Manifiesta algún interés por el proceso de acompañamiento, sin embargo, no tiene mucha claridad sobre los aportes de este en su proceso como universitario.",
       " Manifiesta parcial desconocimiento geográfico de la Universidad y la Ciudad, sin embargo esto no le impide a el/la estudiante realizar sus actividades cotidianas (personales y académicas). ",
-      " El estudiante manifiesta hacer parte de uno o varios grupos que realiza diversas actividades en la Universidad o por fuera de ella, sin embargo no ha logrado un equilibrio entre ellas y sus responsabilidades académicas, o no se siente conforme con su pertenencia a estos grupos ",
+      "El estudiante manifiesta hacer parte de uno o varios grupos que realizan diversas actividades en la Universidad o por fuera de ella, sin embargo, no ha logrado un equilibrio entre ellas y sus responsabilidades académicas, o no se siente conforme con su pertenencia a estos grupos.",
       " Las condiciones de la vivienda (ubicación, físicas, convivencia, etc) impiden la realización de sus actividades personales y académicas. No busca alternativas frente a esta situación o no cuenta con las condiciones para resolver esta situación ",
     ],
     textosVerde: [
       " Manifiesta que ha logrado adaptarse adecuadamente a la Universidad y a la ciudad, lo cual favorece la realización de sus actividades tanto personales como académicas. ",
-      " El/la estudiante reconoce los servicios y ofertas de la univesidad y la ciudad y hace uso de ellas ",
-      " Manifiesta interés genuino por el proceso de acompañamiento. Considera que puede aportar significativamente en su proceso como univesitario. ",
+      "El/la estudiante reconoce los servicios y ofertas de la universidad y la ciudad y hace uso de ellas",
+      "Manifiesta interés genuino por el proceso de acompañamiento. Considera que puede aportar significativamente en su proceso como universitario.",
       " Manifiesta un amplio conocimiento geográfico de la Universidad y la Ciudad, lo cual facilita la realización de sus actividades cotidianas ",
       " El estudiante manifiesta tener interés en actividades diversas, hace parte de uno o varios grupos, y considera que le proporcionan bienestar. Logra alternar estas actividades responsablemente con sus actividades académicas. ",
       " Las condiciones de la vivienda (ubicación, físicas, convivencia, etc) son óptimas y facilitan la realización de sus actividades personales y académicas ",
     ],
   },
 ];
+
+const queEsSemaforo =
+  "El Semáforo de Alertas es un desarrollo metodológico de la Estrategia ASES que integra el conocimiento de diferentes disciplinas, alrededor de los fenómenos de la deserción y fracaso académico, permitiéndonos realizar una aproximación a la comprensión de las diferentes situaciones que experimentan nuestros estudiantes; y los riesgos que pueden estar asociados a las mismas.";
+const queEsSemaforo2 =
+  "La herramienta del Semáforo de Alertas considera un amplio abanico de situaciones que se encuentran categorizadas en 5 dimensiones: individual, familiar, académica, económica y de vida universitaria y ciudad. A su vez, cada dimensión incluye una serie de temáticas que con frecuencia son abordadas durante los acompañamientos. Finalmente, estas temáticas se desarrollan mediante una serie de descriptores que sirven de guía al monitor socioeducativo para categorizar los niveles de riesgo en cada caso. ";
 
 function Body() {
   const [rows, setRows] = useState({
@@ -521,23 +526,60 @@ function Body() {
           </div>
           <div
             className="mensaje-subdimension"
-            style={{ display: subDimensionClicked ? "block" : "none" }}
+            style={
+              subDimensionClicked
+                ? { backgroundColor: "#384a60", color: "white" }
+                : {
+                    backgroundColor: "transparent",
+                    color: "#384a60",
+                    outline: "2px solid #384a60",
+                  }
+            }
           >
-            <p>
-              <b>{tituloSubDimension}</b>
+            <p style={subDimensionClicked ? {} : { color: "inherit" }}>
+              <b style={subDimensionClicked ? {} : { color: "#384a60" }}>
+                {subDimensionClicked
+                  ? tituloSubDimension
+                  : "¿Qué es la estrategia del semáforo?"}
+              </b>
               <br />
-              {textoSubDimension}
+              {subDimensionClicked ? textoSubDimension : queEsSemaforo}
             </p>
           </div>
-          {subDimensionClicked && (
-            <div className="mensaje-semaforo" style={estiloSemaforo}>
-              <p>
-                <b style={estiloTituloSemaforo}>{tituloSemaforo}</b>
-                <br />
-                {mensajeSemaforo}
-              </p>
-            </div>
-          )}
+          <div
+            className="mensaje-semaforo"
+            style={
+              subDimensionClicked
+                ? estiloSemaforo
+                : {
+                    backgroundColor: "transparent",
+                    border: "2px solid #384a60",
+                    color: "#384a60",
+                  }
+            }
+          >
+            <p
+              style={
+                subDimensionClicked
+                  ? {}
+                  : { color: "#384a60" }
+              }
+            >
+              {subDimensionClicked ? (
+                <b
+                  style={
+                    subDimensionClicked
+                      ? estiloTituloSemaforo
+                      : { color: "inherit" }
+                  }
+                >
+                  {tituloSemaforo}
+                </b>
+              ) : null}
+              <br />
+              {subDimensionClicked ? mensajeSemaforo : queEsSemaforo2}
+            </p>
+          </div>
         </div>
       </div>
     </>
