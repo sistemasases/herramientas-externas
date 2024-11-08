@@ -386,7 +386,7 @@ function Body() {
     (color) => {
       if (color === "rojo") {
         setMensajeSemaforo(
-          state.dimensionActual.textosRojo[
+          state.dimensionActual?.textosRojo[
             state.indiceSubDimensionActual
           ]?.trim()
         );
@@ -399,7 +399,7 @@ function Body() {
         });
       } else if (color === "amarillo") {
         setMensajeSemaforo(
-          state.dimensionActual.textosAmarillo[
+          state.dimensionActual?.textosAmarillo[
             state.indiceSubDimensionActual
           ]?.trim()
         );
@@ -412,7 +412,7 @@ function Body() {
         });
       } else if (color === "verde") {
         setMensajeSemaforo(
-          state.dimensionActual.textosVerde[
+          state.dimensionActual?.textosVerde[
             state.indiceSubDimensionActual
           ]?.trim()
         );
