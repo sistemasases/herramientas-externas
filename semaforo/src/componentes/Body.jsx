@@ -2,6 +2,7 @@
 
 import React, { useCallback, useState, useEffect } from "react";
 import "../css/body.css";
+import Footer from "./Footer";
 
 // Importaciones de imágenes mantenidas igual
 import academico from "../images/Botones dimensiones principales/Academico.svg";
@@ -558,13 +559,7 @@ function Body() {
                   }
             }
           >
-            <p
-              style={
-                subDimensionClicked
-                  ? {}
-                  : { color: "#384a60" }
-              }
-            >
+            <p style={subDimensionClicked ? {} : { color: "#384a60" }}>
               {subDimensionClicked ? (
                 <b
                   style={
@@ -582,6 +577,7 @@ function Body() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

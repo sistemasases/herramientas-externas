@@ -5,7 +5,6 @@ import Body from "./componentes/Body";
 import "@fontsource/poppins/700.css";
 import "@fontsource/poppins/400.css";
 import BackgroundBox from "./componentes/Background";
-import Footer from "./componentes/Footer";
 
 function App() {
   return (
@@ -14,7 +13,6 @@ function App() {
       <Header />
       <Titulos />
       <Body />
-      <Footer />
     </div>
   );
 }
