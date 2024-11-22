@@ -137,11 +137,17 @@ function Header() {
       </Modal>
       <header className="header">
         <nav>
-          <h1>SEMÁFORO DE ALERTAS</h1>
-          <p onClick={toggleModal} className="acciones">
-            Acciones
-          </p>
-          <img id="logo" src={logoVicerrectoria} alt="Logo" />
+          <div className="container">
+            <h1>SEMÁFORO DE ALERTAS</h1>
+          </div>
+          <div className="container">
+            <p onClick={toggleModal} className="acciones">
+              Acciones
+            </p>
+          </div>
+          <div className="container">
+            <img id="logo" src={logoVicerrectoria} alt="Logo" />
+          </div>
         </nav>
       </header>
     </>

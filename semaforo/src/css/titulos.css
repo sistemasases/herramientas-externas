@@ -31,3 +31,13 @@
   align-items: center;
   justify-content: center;
 }
+
+@media (max-width: 1080px) {
+  #imgDimensiones {
+    display: none;
+  }
+
+  #imgSemaforo {
+    display: none;
+  }
+}

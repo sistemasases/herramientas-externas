@@ -8,6 +8,7 @@
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
   font-size: 18px;
+  overflow-x: hidden;
 }
 
 .dimensiones,
@@ -257,4 +258,149 @@
 
 .mensaje-semaforo b {
   font-size: 32px;
+}
+
+@media (max-width: 1080px) {
+  .body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dimensiones {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .fila-dimensiones {
+    height: auto;
+  }
+
+  .fila-dimensiones:nth-child(1) {
+    height: auto;
+    min-height: 15vh;
+    gap: 4px;
+    padding: 0 5%;
+    margin-top: 0;
+  }
+
+  .fila-dimensiones:nth-child(1) img {
+    width: 100%;
+  }
+  .mensaje-dimension {
+    margin-top: 5px;
+    font-size: clamp(10px, 2vw, 18px);
+    max-height: 10vh;
+    display: flex;
+    text-align: center;
+    padding-bottom: 5px;
+    padding-top: 5px;
+  }
+
+  .mensaje-dimension p {
+    display: block;
+    top: 0;
+    wrap: wrap;
+    text-align: center;
+    font-size: clamp(10px, 3vw, 18px);
+    max-height: inherit;
+    margin-bottom: 0;
+    overflow-y: auto;
+  }
+
+  .mensaje-dimension img {
+    margin-bottom: 0;
+    max-height: auto;
+    height: auto;
+    min-height: 0;
+  }
+
+  .botones-dimension {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: auto;
+    padding: 0 5%;
+  }
+
+  .semaforo {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 45vh;
+    margin-top: 0;
+    padding: 0 5%;
+    border-top: 5px solid #cc9c69;
+  }
+
+  .mensaje-subdimension {
+    font-size: clamp(10px, 2vw, 18px);
+    max-height: 10vh;
+    display: flex;
+    text-align: center;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    overflow-y: auto;
+  }
+
+  .mensaje-semaforo {
+    font-size: clamp(10px, 2vw, 18px);
+    max-height: 10 vh;
+    display: block;
+    text-align: center;
+    margin-top: calc(10vh + 80px);
+    max-width: 40%;
+    padding-bottom: 10px;
+    margin-right: calc(100px + 1vh);
+  }
+
+  .mensaje-semaforo p {
+    display: block;
+    font-size: clamp(10px, 3vw, 18px);
+    max-height: 100%;
+    margin-bottom: 5%;
+  }
+
+  .mensaje-semaforo b {
+    display: block;
+    font-size: clamp(10px, 5vw, 64px);
+    font-weight: extra-bold;
+    max-height: 100%;
+    margin-top: 5%;
+  }
+
+  .mensaje-subdimension p {
+    display: block;
+    top: 0;
+    wrap: wrap;
+    text-align: center;
+    font-size: clamp(10px, 3vw, 18px);
+    max-height: inherit;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-bottom: 5px;
+  }
+
+  .mensaje-subdimension b {
+    display: block;
+    wrap: wrap;
+    text-align: center;
+    font-size: clamp(10px, 5vw, 64px);
+    font-weight: extra-bold;
+    max-height: inherit;
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+  .contenedor-semaforo {
+    margin-top: 40%;
+    max-height: 30vh;
+  }
+
+  br {
+    display: none;
+  }
 }
