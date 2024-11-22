@@ -6,30 +6,58 @@
 
 header nav {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   font-family: "Poppins";
 }
 
-#logo {
-  width: 35%;
-  font-family: "Poppins";
+.header nav {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: space-between; /* Distribute space evenly */
+  align-items: center; /* Align items vertically */
+}
+
+.header .container {
+  width: 33%; /* Set a consistent width for all containers */
+  text-align: center; /* Center text inside the containers */
+}
+
+.header img {
+  max-width: 100%; /* Scale the image to fit its container */
+  height: auto; /* Maintain aspect ratio */
 }
 
 h1 {
   margin: 0;
-  font-size: clamp(15px, 2vw, 18px);
+  font-size: clamp(15px, 3vw, 50px);
   color: #ffff;
   font-family: "Poppins";
   font-weight: 700;
+  justify-content: left;
+  text-align: left;
 }
 
 .acciones {
   position: relative;
-  font-size: clamp(10px, 1vw, 18px);
+  font-size: clamp(15px, 1vw, 40px);
   cursor: pointer;
   color: #fff;
   font-family: "Poppins";
   font-weight: 700;
   margin: 0 25px;
+}
+
+@media (max-width: 1080px) {
+  .acciones {
+    font-size: clamp(10px, 2vw, 64px);
+  }
+
+  #logo {
+    width: 100%;
+  }
 }
