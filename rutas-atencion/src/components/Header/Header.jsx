@@ -1,6 +1,6 @@
 import React from 'react';
-import './Header.css'
-import logoVicerrectoria from '../../assets/logoVicerrectoria.svg'
+import './Header.css';
+import logoVicerrectoria from '../../assets/logoVicerrectoria.svg';
 
 function Header() {
   return (

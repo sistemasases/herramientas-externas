@@ -5,7 +5,7 @@ import chica from "../../assets/chica.svg";
 import cartel from "../../assets/cartel.svg";
 import React from "react";
 
-const info = [0, 0, 0, 0, 0, 0, 0, 0];
+const info = [0, 0, 0, 0, 0, 0, 0, 0]; // Array with zeros as placeholder
 
 function Body() {
   return (
@@ -23,7 +23,7 @@ function Body() {
             </div>
           </div>
           <div className="dimensions-column">
-            <div className="cartels-grid">
+            <div className="cartels-container">
               {info.map((_, index) => (
                 <div className="cartel-wrapper" key={index}>
                   <img className="cartel-item" src={cartel} alt="Cartel" />

@@ -1,15 +1,63 @@
 .header {
-    background-color: #3559a5;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    height: 10vh;
+  background-color: #3559a5;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  min-height: 60px; /* Ensure minimum height for very small screens */
+}
+
+.header h1 {
+  margin: 0;
+  font-weight: 800;
+  font-size: clamp(0.9rem, 3vw, 1.8rem); /* Responsive font size */
+  flex: 1; /* Allow text to take available space */
+  text-align: left; /* Align text to the left */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Add ellipsis if text overflows */
+}
+
+.header img {
+  height: auto;
+  max-height: 8vh; /* Maximum height relative to header */
+  width: auto;
+  max-width: 25vw; /* Maximum width relative to viewport */
+  object-fit: contain; /* Maintain aspect ratio */
+  margin-left: 1rem; /* Space between text and logo */
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+  .header {
+    padding: 0.75rem;
   }
   
   .header h1 {
-    margin: 0;
-    font-weight: 800;
+    font-size: clamp(0.7rem, 2.5vw, 1.2rem);
   }
+  
+  .header img {
+    max-height: 7vh;
+    max-width: 30vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 0.5rem;
+  }
+  
+  .header h1 {
+    font-size: clamp(0.6rem, 2vw, 1rem);
+  }
+  
+  .header img {
+    max-height: 6vh;
+    max-width: 35vw;
+    margin-left: 0.5rem;
+  }
+}
