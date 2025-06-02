@@ -4,7 +4,7 @@ import bgArbol from "../../assets/bgArbol.svg";
 import chica from "../../assets/chica.svg";
 import Modal from "../Modal/Modal";
 import Cartel from "../Cartel/Cartel";
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import data from "../../data/data.json";
 
 function Body() {
@@ -18,34 +18,20 @@ function Body() {
   // currentData is now derived from the last item in dataHistory
   const currentData = dataHistory[dataHistory.length - 1];
 
-  useEffect(() => {
-    // Initial setup if needed
-  }, []);
-
   // Function to handle opening the modal or navigating deeper
   const handleCartelClick = (element) => {
     if (element.content) {
-      // If content exists, show the modal
       setModalTitle(element.title);
-      // Assuming element.content is a string or simple JSX for now
-      // If content is complex, you might need a function to render it
+
       setModalContent(
         <div dangerouslySetInnerHTML={{ __html: element.content }} />
-      ); // Example if content is HTML string
-      // Or if content is plain text: setModalContent(<p>{element.content}</p>);
+      );
       setIsModalOpen(true);
     } else if (element.children && element.children.length > 0) {
-      // If no content but children exist, navigate deeper
       setDataHistory([...dataHistory, element.children]);
-      setModalContent(null); // Clear modal content when navigating
+      setModalContent(null);
     } else {
-      // Optional: Handle cases where there's no content and no children
-      // Maybe show a default message or do nothing
       console.warn(`Element "${element.title}" has no content or children.`);
-      // Or open modal with a default message:
-      // setModalTitle(element.title);
-      // setModalContent(<p>No hay información adicional disponible.</p>);
-      // setIsModalOpen(true);
     }
   };
 
