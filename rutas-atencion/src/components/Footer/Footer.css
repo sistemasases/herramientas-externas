@@ -9,4 +9,5 @@
   
   .footer p {
     margin-bottom: 0.5rem;
+    font-size: clamp(0.8rem, 1vw, 1.2rem);
   }

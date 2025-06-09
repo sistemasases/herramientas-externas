@@ -17,7 +17,6 @@
 
 .cartel-item {
   max-width: 100%;
-  max-height: 80%; /* Adjust as needed, leave space for title */
   object-fit: contain;
   display: block; /* Ensure image behaves as a block */
   cursor: pointer;
@@ -28,14 +27,14 @@
   top: 48%; /* Adjust vertical position */
   left: 6%;
   transform: translate(0%, -50%); /* Center the text */
-  color: #ffffff; /* Example text color, adjust as needed */
+  color: #ffffff;
   font-weight: bold;
-  font-size: clamp(1.5rem, 2rem, 2.5rem); /* Responsive font size */
-  text-align: center;
-  padding: 0 5px; /* Add some padding */
+  font-size: clamp(1rem, 1.5rem, 2rem); /* Responsive font size */
+  text-align: left;
   white-space: normal; /* Allow text wrapping */
-  max-width: 80%; /* Prevent title from overflowing too much */
+  max-width: 60%; /* Prevent title from overflowing too much */
   pointer-events: none; /* Make sure title doesn't interfere with click */
+  line-height: 1    ; /* Adjust line height for better readability */
 }
 
 /* Responsive adjustments (consider moving these from Body.css as well if they only apply to cartels) */

@@ -2,7 +2,7 @@
 
 .page-container {
   position: relative;
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   overflow: hidden; /* Keep overall page overflow hidden */
 }
@@ -21,6 +21,15 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
+  z-index: -1;
+}
+
+.background-brick-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -2;
 }
 
 /* ... (keep previous .page-container, .background-container, etc.) ... */
@@ -50,9 +59,10 @@
 
 .tooltip-img {
   position: relative;
+  margin-top: 25%; /* This will now be effectively applied via the shorthand below */
   width: 70%;
   height: auto;
-  margin: 0 auto;
+  margin: 25% auto 0; /* Changed from '0 auto' to '25% auto 0' */
   display: flex;
   justify-content: center;
 }
@@ -60,6 +70,7 @@
 .tooltip-img img {
   max-width: 100%;
   height: auto;
+  z-index: 2;
 }
 
 .dimensions-column {
@@ -100,8 +111,29 @@
   z-index: 3;
 }
 
+.textBubble {
+  position: absolute;
+  width: 100%;
+  margin-top: -40%;
+  height: auto;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+}
+
+.tooltip-text {
+  position: absolute;
+  width: 100%;
+  color: black;
+  font-size: clamp(1.5rem, 2rem, 2.5rem);
+  line-clamp: 2;
+  height: auto;
+  z-index: 3;
+  text-align: center;
+}
+
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .columns-container {
     grid-template-columns: 1fr;
     height: 100%;
@@ -112,14 +144,20 @@
   }
 
   .dimensions-column {
-    padding-top: 5vh;
-    padding-bottom: 5vh;
+    padding-top: 0vh;
+    padding-bottom: 0vh;
     height: 100%;
   }
 
   .cartels-container {
-    max-width: 90%;
+    max-width: 100%;
+    padding-top: 7vh; /* Adjust padding for smaller screens */
     justify-content: center;
+    max-height: 100%;
+  }
+
+  #uvArdilla {
+    width: 20vw; /* Adjust size for smaller screens */
   }
 
   /* Adjustments for smaller screens (single column territory) */

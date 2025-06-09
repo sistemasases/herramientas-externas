@@ -1,24 +1,26 @@
 import "./Body.css";
 import uvArdilla from "../../assets/uvArdilla.png";
 import bgArbol from "../../assets/bgArbol.svg";
+import bgLadrillo from "../../assets/brick-bg.png";
 import chica from "../../assets/chica.svg";
+import textBubble from "../../assets/dialogue-bubble.svg";
 import Modal from "../Modal/Modal";
 import Cartel from "../Cartel/Cartel";
 import { useState } from "react";
 import data from "../../data/data.json";
 
+const defaultTooltip = "Rutas de Atención";
+
 function Body() {
   const [isModalOpen, setIsModalOpen] = useState(true);
+  const [modalTitle, setModalTitle] = useState("¿De dónde vienen las rutas?");
+  const [dataHistory, setDataHistory] = useState([data[0].children]);
+  const currentData = dataHistory[dataHistory.length - 1];
+  const [tooltip, setTooltip] = useState(defaultTooltip);
   const [modalContent, setModalContent] = useState(
     <div dangerouslySetInnerHTML={{ __html: data[0].content }} />
   );
-  const [modalTitle, setModalTitle] = useState("¿De dónde vienen las rutas?");
-  // Store the history of data levels for breadcrumbs/back navigation
-  const [dataHistory, setDataHistory] = useState([data[0].children]);
-  // currentData is now derived from the last item in dataHistory
-  const currentData = dataHistory[dataHistory.length - 1];
 
-  // Function to handle opening the modal or navigating deeper
   const handleCartelClick = (element) => {
     if (element.content) {
       setModalTitle(element.title);
@@ -30,6 +32,7 @@ function Body() {
     } else if (element.children && element.children.length > 0) {
       setDataHistory([...dataHistory, element.children]);
       setModalContent(null);
+      setTooltip(element.title);
     } else {
       console.warn(`Element "${element.title}" has no content or children.`);
     }
@@ -39,31 +42,32 @@ function Body() {
   const handleGoBack = () => {
     if (dataHistory.length > 1) {
       setDataHistory(dataHistory.slice(0, -1));
+      setTooltip();
     }
   };
 
   const handleGoHome = () => {
-    // Reset to the initial data level
     setDataHistory([data[0].children]);
   };
 
   return (
     <>
-      {/* Modal component */}
       <Modal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         title={modalTitle}
       >
-        {/* Render dynamic content if available, otherwise null (or a default) */}
         {modalContent}
-        {/* Remove the fallback to DefaultModalContent if dynamic content handles all cases */}
-        {/* {modalContent || <DefaultModalContent />} */}
       </Modal>
 
       <div className="page-container">
         {/* Background container */}
         <div className="background-container">
+          <img
+            src={bgLadrillo}
+            alt="Background Tree"
+            className="background-brick-image"
+          />
           <img
             src={bgArbol}
             alt="Background Tree"
@@ -71,9 +75,7 @@ function Body() {
           />
         </div>
 
-        {/* Content area */}
         <main className="main-content">
-          {/* Optional: Add a Back button */}
           {dataHistory.length > 1 && (
             <>
               <button onClick={handleGoBack} className="back-button">
@@ -89,13 +91,19 @@ function Body() {
             <div className="tooltip-column">
               <div className="tooltip-img">
                 <img id="chica" src={chica} alt="Chica" />
+                <div className="textBubble">
+                  <img id="textBubble" src={textBubble} alt="Text Bubble" />
+                  <p className="tooltip-text">
+                    Estamos en <strong>{tooltip}</strong>
+                  </p>
+                </div>
               </div>
             </div>
             <div className="dimensions-column">
               <div className="cartels-container">
                 {currentData.map((element, index) => (
                   <Cartel
-                    key={index} // Consider using a unique ID from data if available
+                    key={index}
                     title={element.title}
                     onClick={() => handleCartelClick(element)}
                   />
@@ -104,7 +112,6 @@ function Body() {
             </div>
           </div>
         </main>
-        {/* Squirrel image */}
         <img id="uvArdilla" src={uvArdilla} alt="UvArdilla" />
       </div>
     </>
