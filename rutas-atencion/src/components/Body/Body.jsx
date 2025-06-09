@@ -53,6 +53,8 @@ function Body() {
 
   const handleGoHome = () => {
     setDataHistory([data[0].children]);
+    setTooltip(defaultTooltip);
+    setTooltipHistory([defaultTooltip]);
   };
 
   return (
