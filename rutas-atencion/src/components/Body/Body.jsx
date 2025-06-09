@@ -6,6 +6,8 @@ import chica from "../../assets/chica.svg";
 import textBubble from "../../assets/dialogue-bubble.svg";
 import Modal from "../Modal/Modal";
 import Cartel from "../Cartel/Cartel";
+import backButton from "../../assets/back.png";
+import homeButton from "../../assets/home.png";
 import { useState } from "react";
 import data from "../../data/data.json";
 
@@ -17,6 +19,7 @@ function Body() {
   const [dataHistory, setDataHistory] = useState([data[0].children]);
   const currentData = dataHistory[dataHistory.length - 1];
   const [tooltip, setTooltip] = useState(defaultTooltip);
+  const [tooltipHistory, setTooltipHistory] = useState([defaultTooltip]);
   const [modalContent, setModalContent] = useState(
     <div dangerouslySetInnerHTML={{ __html: data[0].content }} />
   );
@@ -33,6 +36,7 @@ function Body() {
       setDataHistory([...dataHistory, element.children]);
       setModalContent(null);
       setTooltip(element.title);
+      setTooltipHistory([...tooltipHistory, element.title]);
     } else {
       console.warn(`Element "${element.title}" has no content or children.`);
     }
@@ -42,7 +46,8 @@ function Body() {
   const handleGoBack = () => {
     if (dataHistory.length > 1) {
       setDataHistory(dataHistory.slice(0, -1));
-      setTooltip();
+      setTooltip(tooltipHistory[tooltipHistory.length - 2] || defaultTooltip);
+      setTooltipHistory(tooltipHistory.slice(0, -1));
     }
   };
 
@@ -79,10 +84,10 @@ function Body() {
           {dataHistory.length > 1 && (
             <>
               <button onClick={handleGoBack} className="back-button">
-                <img src="src\assets\back.png" className="back-icon" />
+                <img src={backButton} className="back-icon" />
               </button>
               <button onClick={handleGoHome} className="home-button">
-                <img src="src\assets\home.png" className="home-icon" />
+                <img src={homeButton} className="home-icon" />
               </button>
             </>
           )}
