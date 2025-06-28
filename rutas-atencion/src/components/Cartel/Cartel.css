@@ -32,9 +32,9 @@
   font-size: clamp(1rem, 1.5rem, 2rem); /* Responsive font size */
   text-align: left;
   white-space: normal; /* Allow text wrapping */
-  max-width: 60%; /* Prevent title from overflowing too much */
+  max-width: 75%; /* Prevent title from overflowing too much */
   pointer-events: none; /* Make sure title doesn't interfere with click */
-  line-height: 1    ; /* Adjust line height for better readability */
+  line-height: 1; /* Adjust line height for better readability */
 }
 
 /* Responsive adjustments (consider moving these from Body.css as well if they only apply to cartels) */
@@ -55,6 +55,6 @@
     min-width: 180px;
   }
   .cartel-title {
-    font-size: clamp(0.6rem, 2.5vw, 1rem);
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
   }
 }

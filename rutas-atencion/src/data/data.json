@@ -76,7 +76,7 @@
             "children": [
               {
                 "title": "Atención Interna",
-                "content": "El programa de salud mental tiene como objetivo promover el bienestar emocional y la salud mental de los estudiantes, a través de actividades que fomenten el autocuidado y la prevención de problemas de salud mental.<br><br>Los programas de promoción y prevención están dirigidos a toda la comunidad universitaria y tiene como objetivo mejorar y mantener la salud integral de los estudiantes desarrollando programas y actividades que promueven el mantenimiento de la salud con base en los ciclos vitales y en factores de riesgos individuales y colectivos.<br><br>Programa de salud sexual y reproductiva, de planificación familiar, charlas y talleres educativos, de autocuidado, psicosociales y de crecimiento profesional (prevención consumo de SPA, nutrición, estilo de vida saludable, toma de muestras de VIH, jornadas de donación de sangre y vacunación, etc.)",
+                "content": null,
                 "children": [
                   {
                     "title": "Sede Cali",
@@ -104,7 +104,7 @@
           },
           {
             "title": "Atención de Violencias Basadas en Género",
-            "content": "El programa de salud sexual y reproductiva tiene como objetivo promover el bienestar sexual y reproductivo de los estudiantes, a través de actividades que fomenten el autocuidado y la prevención de problemas de salud sexual y reproductiva.<br><br>Los programas de promoción y prevención están dirigidos a toda la comunidad universitaria y tiene como objetivo mejorar y mantener la salud integral de los estudiantes desarrollando programas y actividades que promueven el mantenimiento de la salud con base en los ciclos vitales y en factores de riesgos individuales y colectivos.<br><br>Programa de salud sexual y reproductiva, de planificación familiar, charlas y talleres educativos, de autocuidado, psicosociales y de crecimiento profesional (prevención consumo de SPA, nutrición, estilo de vida saludable, toma de muestras de VIH, jornadas de donación de sangre y vacunación, etc.)",
+            "content": null,
             "children": [
               {
                 "title": "Ruta de Atención de Género",

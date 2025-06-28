@@ -16,9 +16,7 @@
   font-size: clamp(0.9rem, 3vw, 1.8rem); /* Responsive font size */
   flex: 1; /* Allow text to take available space */
   text-align: left; /* Align text to the left */
-  white-space: nowrap; /* Prevent text from wrapping */
-  overflow: hidden; /* Hide overflow */
-  text-overflow: ellipsis; /* Add ellipsis if text overflows */
+  white-space: wrap; /* Prevent text from wrapping */
 }
 
 .header img {
@@ -35,11 +33,11 @@
   .header {
     padding: 0.75rem;
   }
-  
+
   .header h1 {
-    font-size: clamp(0.7rem, 2.5vw, 1.2rem);
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
   }
-  
+
   .header img {
     max-height: 7vh;
     max-width: 30vw;
@@ -50,11 +48,7 @@
   .header {
     padding: 0.5rem;
   }
-  
-  .header h1 {
-    font-size: clamp(0.6rem, 2vw, 1rem);
-  }
-  
+
   .header img {
     max-height: 6vh;
     max-width: 35vw;
