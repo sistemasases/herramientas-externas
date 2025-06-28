@@ -38,23 +38,14 @@
 }
 
 /* Responsive adjustments (consider moving these from Body.css as well if they only apply to cartels) */
-@media (max-width: 768px) {
-  .cartel-wrapper {
-    flex-basis: 90%;
-    min-width: 200px;
-  }
-  .cartel-title {
-    font-size: clamp(0.7rem, 2vw, 1.1rem);
-  }
-}
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .cartel-wrapper {
     flex-basis: 95%;
     max-height: 25vh;
     min-width: 180px;
   }
   .cartel-title {
-    font-size: clamp(1.5rem, 2vw, 2.5rem);
+    font-size: clamp(1.3rem, 1.8vw, 2rem);
   }
 }

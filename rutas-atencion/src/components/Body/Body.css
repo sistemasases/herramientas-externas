@@ -120,22 +120,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  vertical-align: top;
 }
 
 .tooltip-text {
   position: absolute;
-  margin: 0 0 0 0;
+  margin: 0;
   top: 0;
-  padding-top: 0%;
   width: 100%;
   text-align: center;
   max-width: 90%;
   color: black;
   font-size: 40px;
-  max-height: 65%;
+  height: 65%;
   z-index: 3;
   overflow: scroll; /* Prevents overflow of text */
-  padding-top: 0%;
+  display: block;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Responsive adjustments */

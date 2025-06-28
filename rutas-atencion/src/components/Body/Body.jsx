@@ -100,8 +100,9 @@ function Body() {
                 <img id="chica" src={chica} alt="Chica" />
                 <div className="textBubble">
                   <img id="textBubble" src={textBubble} alt="Text Bubble" />
+
                   <p className="tooltip-text">
-                    Estamos en <strong>{tooltip}</strong>
+                    <strong>Estamos en {tooltip}</strong>
                   </p>
                 </div>
               </div>
