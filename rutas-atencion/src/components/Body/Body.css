@@ -2,7 +2,7 @@
 
 .page-container {
   position: relative;
-  height: 90vh;
+  height: 75vh;
   width: 100%;
   overflow: hidden; /* Keep overall page overflow hidden */
 }
@@ -74,8 +74,8 @@
 }
 
 .dimensions-column {
-  padding-top: 10vh; /* Adjusted padding */
-  padding-bottom: 10vh; /* Adjusted padding */
+  padding-top: 5vh; /* Adjusted padding */
+  padding-bottom: 5vh; /* Adjusted padding */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -134,7 +134,8 @@
   font-size: 40px;
   height: 65%;
   z-index: 3;
-  overflow: scroll; /* Prevents overflow of text */
+  overflow-y: auto; /* Prevents overflow of text */
+  overflow-x: hidden; /* Prevents horizontal overflow */
   display: block;
   justify-content: center;
   align-items: center;

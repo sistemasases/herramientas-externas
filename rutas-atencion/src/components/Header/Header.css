@@ -6,8 +6,7 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
-  height: 10vh;
-  min-height: 60px; /* Ensure minimum height for very small screens */
+  height: 10dvh;
 }
 
 .header h1 {
