@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Box, Fab } from "@mui/material";
+import { Grid, Box } from "@mui/material";
 import estanteria_1 from "../../assets/estanteria_1.png";
 import estanteria_2 from "../../assets/estanteria_2.png";
 import estanteria_3 from "../../assets/estanteria_3.png";
@@ -12,7 +12,7 @@ import objeto5 from "../../assets/objeto_05.png";
 import objeto6 from "../../assets/objeto_06.png";
 import CajaAcademico from "../Cajaherramientas/CajaDimension";
 import TableInfoTematica from "../TableInfoTematica/TableInfoTematica";
-import AddIcon from '@mui/icons-material/Launch';
+//import AddIcon from '@mui/icons-material/Launch';
 
 const arrayEstanteria = [
   { dimension: "D1 Academica", img: estanteria_2 },
