@@ -1,0 +1,51 @@
+/* Styles moved from Body.css */
+
+.cartel-wrapper {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: calc(50% - 0.5rem); /* Tries for 2 columns */
+  min-width: 250px; /* Forces wrapping earlier */
+  max-height: 30vh;
+  display: flex;
+  flex-direction: column; /* Stack image and title */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  box-sizing: border-box;
+  position: relative; /* Needed for absolute positioning of title */
+  /* border: 1px solid green; /* Optional: for visualization */
+}
+
+.cartel-item {
+  max-width: 100%;
+  object-fit: contain;
+  display: block; /* Ensure image behaves as a block */
+  cursor: pointer;
+}
+
+.cartel-title {
+  position: absolute;
+  top: 48%; /* Adjust vertical position */
+  left: 6%;
+  transform: translate(0%, -50%); /* Center the text */
+  color: #ffffff;
+  font-weight: bold;
+  font-size: clamp(1rem, 1.5rem, 2rem); /* Responsive font size */
+  text-align: left;
+  white-space: normal; /* Allow text wrapping */
+  max-width: 75%; /* Prevent title from overflowing too much */
+  pointer-events: none; /* Make sure title doesn't interfere with click */
+  line-height: 1; /* Adjust line height for better readability */
+}
+
+/* Responsive adjustments (consider moving these from Body.css as well if they only apply to cartels) */
+
+@media (max-width: 768px) {
+  .cartel-wrapper {
+    flex-basis: 95%;
+    max-height: 25vh;
+    min-width: 180px;
+  }
+  .cartel-title {
+    font-size: clamp(1.3rem, 1.8vw, 2rem);
+  }
+}
