@@ -7,10 +7,8 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button'; // Importa el componente Button
 import CloseIcon from '@mui/icons-material/Close'; // Icono botón de cerrar
-import { Link, Typography } from '@mui/material';
 import LaunchIcon from '@mui/icons-material/Launch';
 
 

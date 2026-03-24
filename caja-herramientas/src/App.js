@@ -1,6 +1,6 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import { Grid, Box } from "@mui/material";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import Body from "./components/Body/Body";
 import Footer from "./components/Footer/Footer";
 import BackgroundBox from "./components/Body/Background";
