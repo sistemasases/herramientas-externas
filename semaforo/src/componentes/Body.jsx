@@ -19,7 +19,7 @@ import icon_vida_universitaria from "../images/iconos_dimensiones/icono_vida.svg
 // Botones dimensión académica
 import desempeno_academico from "../images/Botones D. Acádemica/desempeno_academico.svg";
 import eleccion_vocaciona from "../images/Botones D. Acádemica/eleccion_vocacional.svg";
-import manejo_tiempo from "../images/Botones D. Acádemica/manejo_tiempo.svg";
+import manejo_tiempo from "../images/Botones D. Acádemica/autogestion_academica.svg";
 
 // Botones dimensión económica
 import apoyo_economico_familiar from "../images/Botones D. Económica/apoyo_economico_familiar.svg";
@@ -28,7 +28,7 @@ import manejo_finanzas from "../images/Botones D. Económica/manejo_finanzas.svg
 import situacion_laboral from "../images/Botones D. Económica/situacion_laboral.svg";
 
 // Botones dimensión familiar
-import dinamica_familiar from "../images/Botones D. Familiar/dinamica_familiar.svg";
+//import dinamica_familiar from "../images/Botones D. Familiar/dinamica_familiar.svg";
 import relaciones_familiares from "../images/Botones D. Familiar/relaciones_familiares.svg";
 import red_apoyo_familiar from "../images/Botones D. Familiar/red_apoyo_familiar.svg";
 import rol_estudiante_familia from "../images/Botones D. Familiar/rol_estudiante_familia.svg";
@@ -50,7 +50,7 @@ import adaptacion from "../images/Botones D. Vida universitaria/adaptacion.svg";
 import oferta_servicio from "../images/Botones D. Vida universitaria/oferta_servicio.svg";
 import motivaciones from "../images/Botones D. Vida universitaria/motivaciones.svg";
 import referencia from "../images/Botones D. Vida universitaria/referencia.svg";
-import vinculacion from "../images/Botones D. Vida universitaria/vinculacion.svg";
+import vinculacion from "../images/Botones D. Vida universitaria/vinculacion_extracurricular.svg";
 import vivienda from "../images/Botones D. Vida universitaria/vivienda.svg";
 import movilidadTransporte from "../images/Botones D. Vida universitaria/Movilidad_transporte.svg";
 import integracionCultura from "../images/Botones D. Vida universitaria/Integracion_cultura.svg";
@@ -116,6 +116,7 @@ const DIMENSIONS = [
       "Relación Erótico-Afectivo",
       "Salud",
       "Autonomía",
+      
     ],
     textosSubdimensiones: [
       "El proceso psicológico básico de la motivación contiene dos componentes principales: “los direccionales (que dan cuenta de la elección) y los energizadores (que dan cuenta de la iniciación, la persistencia y el vigor) de la conducta dirigida a meta”",
@@ -124,7 +125,7 @@ const DIMENSIONS = [
       "Esta temática hace referencia a todas las narraciones de vida en tiempo pasado que realizan los estudiantes desde los diferentes contextos socioculturales que vivieron; da cuenta de las prácticas, creencias y valores familiares y culturales que influyen en sus decisiones y en sus formas de ver el mundo.",
       "Documento oficial emitido por la Administración que sirve para identificar a las personas por su nombre, nacimiento, nacionalidad y domicilio",
       "Esta temática engloba todos los proyectos y metas a mediano y largo plazo que los estudiantes manifestan en los acompañamientos entre pares. El proyecto de vida articula la identidad con las perspectivas y posibilidades de desarrollo futuro.",
-      "El/La estudiante no cuenta con una red de apoyo; se mantiene aislado/a del los grupos sociales que lo/la rodean y por lo tanto, no cuenta con amigos en quienes confiar. O cuenta con relaciones sociales que no velan o no están en condiciones de velar por su bienestar o, con quienes se involucra en situaciones que lo ponen en peligro.",
+      "todos aquellos vínculos que tiene el estudiante con otros individuos y/o grupos que sirven para mejorar la adaptación cuando este se enfrenta a situaciones de estrés, reto o privación y que sirven como instancia mediadora en la que se brinda apoyo social de tipo emocional, afectivo e informativo.",
       "Esta temática contiene todo lo referido por los estudiantes narrativamente en relación con sus relaciones eróticas, afectivas y sentimentales.",
       "Esta temática hace referencia a aquellas acciones que permitan identificar y conocer el estado de salud del estudiante, así como su evolución en caso de enfermedad o  accidente. También se refiere a los reportes que se tengan acerca de la salud mental del estudiante. \n- Informe de cómo se encuentra el estudiante de salud.\n- Informe sobre el seguimiento a sus citas médicas y psicológicas.\n- Informe sobre trámites de la EPS, del Servicio médico y psicológico.",
       "Se refiere a la capacidad de autogestión, resolución y toma de decisiones del estudiante. Reconociendo su momento vital, recursos de gestión de las emociones y de situaciones retadoras.",
@@ -173,30 +174,26 @@ const DIMENSIONS = [
     name: "Familiar",
     img: familiar,
     icon: icon_familiar,
-    buttons: [dinamica_familiar, relaciones_familiares, red_apoyo_familiar, rol_estudiante_familia],
+    buttons: [relaciones_familiares, red_apoyo_familiar, rol_estudiante_familia],
     message:
       "Corresponde a la descripción de la dinámica familiar y cómo esta dinámica es una barrera o un facilitador en la elección y la permanencia en el programa académico.",
-    titulosSubdimensiones: ["Dinámica Familiar", "Relaciones Familiares", "Red de Apoyo Familiar"],
+    titulosSubdimensiones: ["Relaciones Familiares", "Red de Apoyo Familiar", "Rol del estudiante en la familia"],
     textosSubdimensiones: [
-      "Se define como los encuentros entre las subjetividades, encuentros mediados por una serie de normas, reglas, límites, jerarquías y roles, entre otros, que regulan la convivencia y permite que el funcionamiento de la vida familiar se desarrolle armónicamente. El seguimiento familiar implica reconocer la existencia de lazos de parentesco, afecto, comunicación, límites, jerarquías, roles, toma de decisiones, los cuales se van construyendo entre sus miembros de la familia y definen la realización del ser y la búsqueda del bienestar colectivo.",
       "Narraciones del estudiante que den cuenta del tipo de conexiones y vínculos entre los miembros de su círculo familia. También, de los relatos con respecto al efecto de estos vínculos en su desarrollo, en su proceso formativo y en su vida afectiva.",
       "Narraciones del estudiante acerca de la respuesta de su familia y de su círculo de mayor confianza ante situaciones en las que él requiere apoyo.",
       "Naraciones de estudiante que den cuenta de las responsabilidades, actividades, expectativas frente a la vida familiar que se le encargan al estudiante  y, el efecto de estas en su vida cotidiana."
     ],
     textosRojo: [
-      "El/la estudiante no cuenta con un apoyo emocional, económico, de alimentación y vivienda por parte de los miembros de su familia.\n- El/la estudiante tiene una red de apoyo familiar ausente, puesto que cuando se le presenta una dificultad personal, éste no recibe ningún tipo de ayuda por parte de su familia o los que considera su grupo familiar.- El/la estudiante tiene relaciones conflictivas con los miembros de su familia.\n- El/la estudiante refiere que en su familia hay múltiples problemas, crisis recurrentes y situaciones crónicas de adversidad.\n- El rol (hijo/a, hermano/a, cuidador/a, aportante económico) que ejerce el/la estudiante en su familia interfiere sus compromisos académicos tales como: faltar a clases, no presentarse a los parciales, cancelar asignaturas, cancelar el semestre ",
       "El/la estudiante tiene relaciones conflictivas con los miembros de su familia. \n- El/la estudiante refiere que entre los miembros de su familia hay múltiples problemas, crisis recurrentes y situaciones crónicas de adversidad y/o violencia intrafamiliar.",
       "El/la estudiante tiene una red de apoyo familiar ausente o inexistente, puesto que cuando se le presenta una dificultad personal, éste no recibe ningún tipo de ayuda por parte de su familia o los que considera su grupo familiar. El/la estudiante carece de cualquier tipo de red de apoyo familiar que le puede brindar soporte.",
       "El rol (hijo/a, hermano/a, cuidador/a, aportante económico) que ejerce el/la estudiante en su familia interfiere en sus compromisos académicos tales como: faltar a clases, no presentarse a los parciales, cancelar asignaturas, cancelar el semestre."
     ],
     textosAmarillo: [
-      "El/la estudiante tiene un mediano apoyo emocional, económico, de alimentación y vivienda por parte de su familia o familiares.\n- El/la estudiante tiene una red de apoyo familiar débil, puesto que cuando se le presenta una dificultad personal éste no recibe la ayuda de manera efectiva.\n- El/la estudiante tiene algunas relaciones conflictivas con los miembros de su familia, pero son superables y momentáneas.\n- El rol (hijo/a, hermano/a, cuidador/a, aportante económico) que ejerce el/la estudiante en su familia interfiere el algunas ocasiones con sus compromisos académicos. ",
       "El/la estudiante tiene relaciones conflictivas con algunos miembros de su familia, pero son superables y momentáneas.",
       "El/la estudiante tiene un mediano apoyo emocional, económico, de alimentación y vivienda por parte de su familia o familiares. El/la estudiante tiene una red de apoyo familiar débil, puesto que cuando se le presenta una dificultad personal éste no recibe la ayuda de manera completa u oportuna.",
       "El rol (hijo/a, hermano/a, cuidador/a, aportante económico) que ejerce el/la estudiante en su familia interfiere el algunas ocasiones con sus compromisos académicos. "
     ],
     textosVerde: [
-      "El/la estudiante busca principalmente un apoyo emocional de su familia, así como un apoyo económico, de alimentación y vivienda.\n- El/la estudiante cuando se le presenta una dificultad personal inicialmente acude a su familia como su principal red de apoyo.\n- El/la estudiante manifiesta tener buenas relaciones con los miembros de su grupo familiar.\n- El rol (hijo/a, hermano/a, cuidador/a, aportante económico) que ejerce el/la estudiante en su familia no interfiere con sus compromisos académicos. ",
       "El/la estudiante manifiesta que se mantiene una dinamica relacional óptima y sana entre los miembros de la familia.",
       "El/la estudiante recibe apoyo emocional de su familia, así como económico, de alimentación y vivienda, entre otros.                                                                                          El/la estudiante cuando se le presenta una dificultad personal inicialmente acude a su familia como su principal red de apoyo.",
       "El rol (hijo/a, hermano/a, cuidador/a, aportante económico) que ejerce el/la estudiante en su familia no interfiere con sus compromisos académicos."
@@ -212,7 +209,7 @@ const DIMENSIONS = [
     titulosSubdimensiones: [
       "Desempeño Académico",
       "Elección Vocacional",
-      "Manejo del Tiempo",
+      "Autogestión Académica",
     ],
     textosSubdimensiones: [
       "Esta temática incluye las narraciones realizadas por los estudiantes en torno a las metodologias utilizadas en las clases, información de las diversas asignaturas y seguimientos académicos; ejemplo: reporte del rendimiento académico (notas), reporte de la carga académica, informe de las necesidades académicas identificadas con el estudiante (bases conceptules para las diversas asignaturas) y refuerzo académico (asesorías académicas). Además, se incluye la revisión de las habilidades académicas y recursos con los que el estudiante cuenta para superar la exigencia en sus asignaturas.",
@@ -293,13 +290,13 @@ const DIMENSIONS = [
       integracionCultura,
     ],
     message:
-      "Corresponde a la información que refiere el/la estudiante respecto a la percepción que este tiene de su vida en la Universidad y la ciudad.",
+      "Corresponde a la información que refiere el/la estudiante respecto a la percepción que éste tiene de su vida en la Universidad y el territorio. Además de la participación en los diferentes espacios de la Universidad (espacios extracurriculares, monitorías, , servicios de la Universidad, grupos universitarios, etc.)  y del territorio (vivienda, barrio, transporte, sitios representativos, espacios culturales, etc.)",
     titulosSubdimensiones: [
       "Adaptación a la Ciudad y la Universidad",
       "Oferta de Servicios",
       "Motivaciones Para el Acompañamiento",
       "Referenciación Geográfica",
-      "Vinculación a Grupos y Extracurriculares",
+      "Vinculación a grupos estudiantiles o externos",
       "Vivienda",
       "Movilidad y Transporte",
       "Integración a la cultura universitaria",
@@ -307,11 +304,12 @@ const DIMENSIONS = [
     textosSubdimensiones: [
       "Esta temática involucra todo lo expresado por los estudiantes en relación con la adaptación que se encuentran realizando al nuevo contexto de ciudad en el que se encuentra, para el caso de estudiantes que proceden de otros municipios y regiones del país. Además de las diferentes experiencias que expresan los estudiantes con relación a su adaptación a la Universidad.",
       "En este apartado se identifica el reconocimiento y la participación de los y las estudiantes en los espacios y servicios institucionales (servicio de psicología, bienestar universitario, acompañamiento socioeducativo, talleres, actividades, etc.)",
-      "Esta temática aborda los momentos de presentación entre el monitor y elestudiante, incluyendo además la explicación de la estrategia ASES y expectativas de ingreso a la universidad de parte de los estudiantes y del acompañamiento que van a tener.",
+      "Esta temática aborda los momentos de presentación entre el monitor y el estudiante, incluyendo además la explicación de la estrategia ASES y expectativas de ingreso a la universidad de parte de los estudiantes y del acompañamiento que van a tener.",
       "En este apartado nos encontramos con el conocimiento por parte de los estudiantes, de las caracteristicas y lugares de los territorios cotidianos (tanto en la universidad como en la ciudad, minicipio o distrito que habitan)",
-      "Este apartado contiene lo relacionado con el interés, exploración yvinculación de los estudiantes a grupos estudiantiles, académicos, investigativos, culturales, y deportivos de la Universidad del Valle o externos.",
+      "Este apartado contiene lo relacionado con el interés, exploración y vinculación de los estudiantes a grupos estudiantiles, académicos, investigativos, culturales, y deportivos de la Universidad del Valle o externos.",
       "Esta temática contiene todas las particularidades de vivienda de los estudiantes, incluyendo organización del espacio, problemas con los inquilinos, entre otros y la utilización del programa GeoCalízate.",
       "En esta temática se identifica todo lo relacionado con el deplazamiento que realizan los y las estudiantes para llegar desde su vivienda al campus; teniendo en cuenta que algunos son foráneos, otros residen fuera del municipio y no todos cuentan con transporte particular para desplazarse.",
+      "En este apartado se hace referencia a cómo el/la estudiante se identifica y se siente acogido/a en la comunidad universitaria; donde se identifica su nivel de conexión con el entorno, el grado de integración a las dinámicas institucionales, la calidad de sus relaciones con compañeros/as, docentes y equipos de apoyo, así como su disposición a participar en actividades, espacios y servicios ofrecidos por la universidad.",
     ],
     textosRojo: [
       "El/la estudiante manifiesta que la adaptación al territorio ha sido muy difícil, se siente inseguro/a por las situaciones de violencia en el contexto, no soporta el clima, evita salir de la vivienda, o expresa que ha considerado abandonar la universidad por motivos de ubicación.",
